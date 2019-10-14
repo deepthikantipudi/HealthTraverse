@@ -19,8 +19,8 @@ public class PatientInsurancePlanService {
 		return patientInsurancePlanRepo.findAll();
 	}
 	
-	public PatientInsurancePlan findByPid(int pId){
-		return patientInsurancePlanRepo.findById(pId).orElseThrow(RecordNotFoundException::new);
+	public List<PatientInsurancePlan> findByPid(long pId){
+		return patientInsurancePlanRepo.findByPid(pId);
 	}
 	
 	public PatientInsurancePlan addPlan(PatientInsurancePlan patientInsurancePlan) {
@@ -28,7 +28,7 @@ public class PatientInsurancePlanService {
 	}
 	
 	public PatientInsurancePlan updatePlan(PatientInsurancePlan patientInsurancePlan, int insId) {
-		if(patientInsurancePlan.getInsId() != insId) {
+		if(patientInsurancePlan.getInsuranceId()!= insId) {
 			throw new RecordIdMismatchException();
 		}
 		patientInsurancePlanRepo.findById(insId).orElseThrow(RecordNotFoundException::new);

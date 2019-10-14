@@ -1,29 +1,32 @@
 package com.miraclesoft.io.model;
 
 import javax.persistence.Column;
+
 import javax.persistence.Entity;
+import javax.persistence.ForeignKey;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
 
 @Entity
 @Table(name="PATIENT_PROFILE")
 public class PatientProfile {
-
+	
 	@Id
-	@GeneratedValue(strategy= GenerationType.AUTO)
-	@Column(name="PID") 
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name="PID")
 	private long pid;
 	
-//	@Column(name="USER_ID")
-//	private long user_id;
+//	@JoinColumn(foreignKey = @ForeignKey(name = "USER_ID"))
+	@Column(name="USER_ID")
+	private long userId;
 	
-	@ManyToOne
-	@JoinColumn(name = "USER_ID")
-	private Users user_id;
+//	@ManyToOne
+//	@JoinColumn(foreignKey = @ForeignKey(name = "USER_ID"))
+//	private User user;
 	
 	@Column(name="RELATION")
 	private String relation;
@@ -32,19 +35,36 @@ public class PatientProfile {
 	private String patientName;
 	
 	@Column(name="HEIGHT")
-	private long height ;
+	private long height;
 	
 	@Column(name="WEIGHT")
 	private long weight;
-
+	
 	public PatientProfile() {
 		super();
 	}
 
-	public PatientProfile(long pid, Users user_id, String relation, String patientName, long height, long weight) {
+	public PatientProfile(String relation, String patientName, long height, long weight) {
+		super();
+		this.relation = relation;
+		this.patientName = patientName;
+		this.height = height;
+		this.weight = weight;
+	}
+
+	public PatientProfile(long userId, String relation, String patientName, long height, long weight) {
+		super();
+		this.userId = userId;
+		this.relation = relation;
+		this.patientName = patientName;
+		this.height = height;
+		this.weight = weight;
+	}
+
+	public PatientProfile(long pid, long userId, String relation, String patientName, long height, long weight) {
 		super();
 		this.pid = pid;
-		this.user_id = user_id;
+		this.userId = userId;
 		this.relation = relation;
 		this.patientName = patientName;
 		this.height = height;
@@ -59,12 +79,12 @@ public class PatientProfile {
 		this.pid = pid;
 	}
 
-	public Users getUser_id() {
-		return user_id;
+	public long getUserId() {
+		return userId;
 	}
 
-	public void setUser_id(Users user_id) {
-		this.user_id = user_id;
+	public void setUserId(long userId) {
+		this.userId = userId;
 	}
 
 	public String getRelation() {
@@ -75,11 +95,11 @@ public class PatientProfile {
 		this.relation = relation;
 	}
 
-	public String getPatient() {
+	public String getPatientName() {
 		return patientName;
 	}
 
-	public void setPatient(String patientName) {
+	public void setPatientName(String patientName) {
 		this.patientName = patientName;
 	}
 
@@ -101,10 +121,8 @@ public class PatientProfile {
 
 	@Override
 	public String toString() {
-		return "PatientProfile [pid=" + pid + ", user_id=" + user_id + ", relation=" + relation + ", patient=" + patientName
-				+ ", height=" + height + ", weight=" + weight + "]";
+		return "PatientProfile [pid=" + pid + ", userId=" + userId + ", relation=" + relation + ", patientName="
+				+ patientName + ", height=" + height + ", weight=" + weight + "]";
 	}
-
-
+	
 }
-

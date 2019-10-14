@@ -2,6 +2,7 @@ package com.miraclesoft.io.controller;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -11,7 +12,7 @@ import com.miraclesoft.io.ExceptionHandler.RecordNotFoundException;
 import com.miraclesoft.io.model.HealthCare;
 import com.miraclesoft.io.repository.HealthCareRepository;
 
-
+@CrossOrigin(origins="*")
 @RestController
 public class HealthController {
 	

@@ -10,6 +10,7 @@ import javax.swing.text.html.parser.Entity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.DateTimeFormat.ISO;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,7 +26,7 @@ import com.miraclesoft.io.repository.ResourceRepository;
 import com.miraclesoft.io.services.EventService;
 import com.miraclesoft.io.services.ResourceService;
 
-
+@CrossOrigin(origins="*")
 @RestController
 public class MainController {
 

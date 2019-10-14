@@ -13,47 +13,40 @@ import javax.validation.constraints.NotNull;
 @Table(name="PATIENT_INSURANCE_PLAN")
 public class PatientInsurancePlan {
 	@Id
-//	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name="INS_ID")
-	private int insId;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name="INSURANCE_ID")
+	private int insuranceId;
 	@Column(name="PID")
 	@NotNull
-	private int pId;
+	private long pId;
 	@Column(name="MEDICAL_DEDUCTABLE")
 	@NotNull
-	private int medicalDeductable;
+	private long medicalDeductable;
 	@Column(name="DENTAL_DEDUCTABLE")
 	@NotNull
-	private int dentalDeductable;
+	private long dentalDeductable;
 	@Column(name="PRES_DEDUCTABLE")
 	@NotNull
-	private int presDeductable;
-	@Column(name="DATE")
-	@NotNull
-	@NotEmpty
-	private String date;
+	private long presDeductable;
+//	@Column(name="DATE")
+//	@NotNull
+//	private String date;
+//	
+	@Column(name="COVERAGE")
+	private long coverage;
 	
-	public PatientInsurancePlan() {
-		super();
-		// TODO Auto-generated constructor stub
+	@Column(name="MONTHLY_RATE")
+	private long monthlyRate;
+
+	public int getInsuranceId() {
+		return insuranceId;
 	}
 
-	@Override
-	public String toString() {
-		return "PatientInsurancePlan [insId=" + insId + ", pId=" + pId + ", medicalDeductable=" + medicalDeductable
-				+ ", dentalDeductable=" + dentalDeductable + ", presDeductable=" + presDeductable + ", date=" + date
-				+ "]";
+	public void setInsuranceId(int insuranceId) {
+		this.insuranceId = insuranceId;
 	}
 
-	public int getInsId() {
-		return insId;
-	}
-
-	public void setInsId(int insId) {
-		this.insId = insId;
-	}
-
-	public int getpId() {
+	public long getpId() {
 		return pId;
 	}
 
@@ -61,7 +54,7 @@ public class PatientInsurancePlan {
 		this.pId = pId;
 	}
 
-	public int getMedicalDeductable() {
+	public long getMedicalDeductable() {
 		return medicalDeductable;
 	}
 
@@ -69,7 +62,7 @@ public class PatientInsurancePlan {
 		this.medicalDeductable = medicalDeductable;
 	}
 
-	public int getDentalDeductable() {
+	public long getDentalDeductable() {
 		return dentalDeductable;
 	}
 
@@ -77,7 +70,7 @@ public class PatientInsurancePlan {
 		this.dentalDeductable = dentalDeductable;
 	}
 
-	public int getPresDeductable() {
+	public long getPresDeductable() {
 		return presDeductable;
 	}
 
@@ -85,12 +78,75 @@ public class PatientInsurancePlan {
 		this.presDeductable = presDeductable;
 	}
 
-	public String getDate() {
-		return date;
+	public long getCoverage() {
+		return coverage;
 	}
 
-	public void setDate(String date) {
-		this.date = date;
+	public void setCoverage(int coverage) {
+		this.coverage = coverage;
 	}
+
+	public long getMonthlyRate() {
+		return monthlyRate;
+	}
+
+	public void setMonthlyRate(int monthlyRate) {
+		this.monthlyRate = monthlyRate;
+	}
+
+	
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		PatientInsurancePlan other = (PatientInsurancePlan) obj;
+		if (coverage != other.coverage)
+			return false;
+		if (dentalDeductable != other.dentalDeductable)
+			return false;
+		if (insuranceId != other.insuranceId)
+			return false;
+		if (medicalDeductable != other.medicalDeductable)
+			return false;
+		if (monthlyRate != other.monthlyRate)
+			return false;
+		if (pId != other.pId)
+			return false;
+		if (presDeductable != other.presDeductable)
+			return false;
+		return true;
+	}
+
+	public PatientInsurancePlan(int insuranceId, @NotNull int pId, @NotNull int medicalDeductable,
+			@NotNull int dentalDeductable, @NotNull int presDeductable, int coverage, int monthlyRate) {
+		super();
+		this.insuranceId = insuranceId;
+		this.pId = pId;
+		this.medicalDeductable = medicalDeductable;
+		this.dentalDeductable = dentalDeductable;
+		this.presDeductable = presDeductable;
+		this.coverage = coverage;
+		this.monthlyRate = monthlyRate;
+	}
+
+	@Override
+	public String toString() {
+		return "PatientInsurancePlan [insuranceId=" + insuranceId + ", pId=" + pId + ", medicalDeductable="
+				+ medicalDeductable + ", dentalDeductable=" + dentalDeductable + ", presDeductable=" + presDeductable
+				+ ", coverage=" + coverage + ", monthlyRate=" + monthlyRate + "]";
+	}
+
+	public PatientInsurancePlan() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	
+	
 	
 }

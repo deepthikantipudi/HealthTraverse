@@ -5,6 +5,7 @@ import javax.validation.constraints.Min;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,7 +17,7 @@ import com.miraclesoft.io.model.UserDetail;
 import com.miraclesoft.io.services.UserService;
 
 
-
+@CrossOrigin(origins="*")
 @RestController
 @RequestMapping(value = "app")
 public class UserController {

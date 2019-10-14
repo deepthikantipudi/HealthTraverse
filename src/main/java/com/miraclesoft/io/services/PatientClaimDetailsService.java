@@ -21,15 +21,15 @@ public class PatientClaimDetailsService {
 		return patientClaimDetailsRepo.findAll();
 	}
 	
-	public PatientClaimDetails findByPid(int pId){
-		return patientClaimDetailsRepo.findById(pId).orElseThrow(RecordNotFoundException::new);
+	public List<PatientClaimDetails> findByPid(long pId){
+		return patientClaimDetailsRepo.findByPid(pId);
 	}
 	
 	public PatientClaimDetails addClaims(PatientClaimDetails patientClaimDetails) {
 		return patientClaimDetailsRepo.save(patientClaimDetails);
 	}
 	
-	public PatientClaimDetails updateClaim(PatientClaimDetails patientClaimDetails, int claimId) {
+	public PatientClaimDetails updateClaim(PatientClaimDetails patientClaimDetails, long claimId) {
 		if(patientClaimDetails.getClaimId() != claimId) {
 			throw new RecordIdMismatchException();
 		}
@@ -37,7 +37,7 @@ public class PatientClaimDetailsService {
 		return patientClaimDetailsRepo.save(patientClaimDetails);
 	}
 	
-	public String deleteClaim(int claimId) {
+	public String deleteClaim(long claimId) {
 		patientClaimDetailsRepo.findById(claimId).orElseThrow(RecordNotFoundException::new);
 		patientClaimDetailsRepo.deleteById(claimId);
 		return "Deleted";

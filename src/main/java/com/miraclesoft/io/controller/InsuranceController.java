@@ -5,6 +5,7 @@ import java.util.List;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,7 +18,7 @@ import com.miraclesoft.io.model.PatientClaimDetails;
 import com.miraclesoft.io.model.PatientInsurancePlan;
 import com.miraclesoft.io.services.PatientClaimDetailsService;
 import com.miraclesoft.io.services.PatientInsurancePlanService;
-
+@CrossOrigin(origins="*")
 @RestController
 public class InsuranceController {
 
@@ -33,7 +34,7 @@ public class InsuranceController {
 	}
 	
 	@GetMapping("/claims/{pid}")
-	public PatientClaimDetails getClaimByPid(@PathVariable("pid") int pid){
+	public List<PatientClaimDetails> getClaimByPid(@PathVariable("pid") long pid){
 		return patientClaimDetailsService.findByPid(pid);
 	}
 	
@@ -43,12 +44,12 @@ public class InsuranceController {
 	}
 	
 	@PutMapping("/claims/{claimid}")
-	public PatientClaimDetails updateClaim(@RequestBody PatientClaimDetails patientClaimDetails, @PathVariable("claimid") int claimId) {
+	public PatientClaimDetails updateClaim(@RequestBody PatientClaimDetails patientClaimDetails, @PathVariable("claimid") long claimId) {
 		return patientClaimDetailsService.updateClaim(patientClaimDetails, claimId);
 	}
 	
 	@DeleteMapping("/claims/{claimid}")
-	public String deleteClaim(@PathVariable("claimid") int claimId) {
+	public String deleteClaim(@PathVariable("claimid") long claimId) {
 		return patientClaimDetailsService.deleteClaim(claimId);
 	}
 	
@@ -58,7 +59,7 @@ public class InsuranceController {
 	}
 	
 	@GetMapping("/plans/{pid}")
-	public PatientInsurancePlan getInsuranceByPid(@PathVariable("pid") int pid){
+	public List<PatientInsurancePlan> getInsuranceByPid(@PathVariable("pid") long pid){
 	return patientInsurancePlanService.findByPid(pid);
 	}
 	

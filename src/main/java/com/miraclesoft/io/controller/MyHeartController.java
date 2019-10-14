@@ -3,6 +3,7 @@ package com.miraclesoft.io.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,7 +13,7 @@ import com.miraclesoft.io.repository.MyHeartRepo;
 
 
 
-
+@CrossOrigin(origins="*")
 @RestController
 public class MyHeartController {
 	
