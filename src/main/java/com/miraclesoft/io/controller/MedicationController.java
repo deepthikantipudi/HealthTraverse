@@ -1,10 +1,13 @@
 package com.miraclesoft.io.controller;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,8 +21,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.miraclesoft.io.ExceptionHandler.RecordIdMismatchException;
 import com.miraclesoft.io.ExceptionHandler.RecordNotFoundException;
+import com.miraclesoft.io.model.MedPrescriptionDTO;
 import com.miraclesoft.io.model.Medication_Details;
 import com.miraclesoft.io.model.PatientPrescription;
 import com.miraclesoft.io.model.PatientPrescriptionDetails;
@@ -41,12 +46,9 @@ public class MedicationController {
 	
 	@Autowired
 	PatientPrescriptionDetailsRepo patientPrescriptionDetailsRepo;
+//	   ObjectMapper Obj = new ObjectMapper(); 
 	
-	 @GetMapping
-	    public Iterable findAll() {
-		 System.out.println("fetching records from database....");
-	        return medrepo.findAll();
-	    }
+	
 	 
 //	 @PostMapping("/addmedication")
 //	 public Medication_Details create(@Valid @RequestBody Medication_Details med) {
@@ -72,7 +74,18 @@ public class MedicationController {
 
 	 }
 	 
+	 //////////////////
 	 
+	 
+	 @GetMapping(value="/getmedpres",produces=MediaType.APPLICATION_JSON_VALUE)
+	    public List<MedPrescriptionDTO> fetchMedications(@Value("${fetchAllPres}") String query) throws Exception {
+		 System.out.println("fetching records from database....");
+		 return medrepo.fetchMedications(query);
+		 
+		// return abc.get(0).getDosage();
+	         
+	         
+	    }
 	 
 	 
 	 
@@ -101,7 +114,7 @@ public class MedicationController {
 //	    }
 //	 
 	 @DeleteMapping("/{id}")
-	    public void delete(@PathVariable Long id) {
+	    public void delete(@PathVariable int id) {
 	        medrepo.findById(id);
 	          			 System.out.println("deleting from database....");
 
@@ -119,7 +132,7 @@ public class MedicationController {
 	    }
 	 
 	 
-	 //////////////Patient Prescription///////////////////////////////////////////////////
+	 //////////////Patient Prescription Details///////////////////////////////////////////////////
 	 
 	 @PostMapping("/addPPD")
 	 public PatientPrescriptionDetails addPPD(@RequestBody PatientPrescriptionDetails ppd) {
@@ -128,6 +141,12 @@ public class MedicationController {
 	        return patientPrescriptionDetailsRepo.save(ppd);
 	    }
 	 
+//	 @GetMapping("/getPPDS")
+//	    public Iterable findAll() {
+//		 System.out.println("fetching records from database....");
+//	        return patientPrescriptionDetailsRepo.findAll();
+//	    }
+//	 
 	 
 	 //////////////////////////////////////////////////////////////////////////////////////
 	 

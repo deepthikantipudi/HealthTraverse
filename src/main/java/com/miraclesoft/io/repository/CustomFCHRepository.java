@@ -6,6 +6,7 @@ import com.miraclesoft.io.model.AverageBloodPressureEntity;
 import com.miraclesoft.io.model.AverageCholestrolEntity;
 import com.miraclesoft.io.model.AverageEntity;
 import com.miraclesoft.io.model.AverageGlucoseEntity;
+import com.miraclesoft.io.model.MedPrescriptionDTO;
 
 
 
@@ -17,4 +18,8 @@ public interface CustomFCHRepository {
 	List<AverageCholestrolEntity> findCholestrolAverageValues(long patientId, String query, int year) throws Exception;
 	List<AverageGlucoseEntity> findGlucoseAverageValues(long patientId, String query, int year) throws Exception;
 	List<AverageBloodPressureEntity> findAverageBPValues(long patientId, String query, int year) throws Exception;
+	
+	//Prescription
+	List fetchMedications(String query) throws Exception;
+	///
 }

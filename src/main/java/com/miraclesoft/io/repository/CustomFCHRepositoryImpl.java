@@ -14,6 +14,7 @@ import com.miraclesoft.io.model.AverageBloodPressureEntity;
 import com.miraclesoft.io.model.AverageCholestrolEntity;
 import com.miraclesoft.io.model.AverageEntity;
 import com.miraclesoft.io.model.AverageGlucoseEntity;
+import com.miraclesoft.io.model.MedPrescriptionDTO;
 
 
 
@@ -214,6 +215,14 @@ public class CustomFCHRepositoryImpl implements CustomFCHRepository {
         	//System.out.println(ent);
         			//getResultList();
         	return avgList;
+	}
+
+	@Override
+	public List<MedPrescriptionDTO> fetchMedications(String fetchall) throws Exception {
+		// TODO Auto-generated method stub
+		Query query = entityManager.createNativeQuery(fetchall);
+		List jh = query.getResultList();
+		return jh;
 	}
 			
 

@@ -12,10 +12,20 @@ import javax.persistence.Table;
 public class PatientPrescription {
 
 	@Id
+	@Column(name="PRESID")
+	private int presid;
+	
 	@Column(name="PID")
 	private long pid;
 	
-	
+	public long getPresid() {
+		return presid;
+	}
+
+	public void setPresid(int presid) {
+		this.presid = presid;
+	}
+
 	@Column(name="START_DATE")
 	private Date START_DATE;
 	
