@@ -18,23 +18,23 @@ public class Users {
 	@Column(name = "USER_ID", unique = true, nullable = false)
 	private Long id;
 
-	@Column(name = "user_name")
+	@Column(name = "USER_NAME")
 	private String username;
 
-	@Column(name = "first_name")
+	@Column(name = "FIRST_NAME")
 	private String fname;
 	
 
-	@Column(name = "last_name")
+	@Column(name = "LAST_NAME")
 	private String lname;
 
-	@Column(name = "registration_mechanism")
-	private String mode;
+
+//	private String mode;
 	
-	@Column(name = "password")
+	@Column(name = "PASSWORD")
 	private String password;
 	
-	@Column(name = "role")
+	@Column(name = "ROLES")
 	private String roles;
 	
 	
@@ -79,14 +79,14 @@ public class Users {
 	public void setLname(String lname) {
 		this.lname = lname;
 	}
-
-	public String getMode() {
-		return mode;
-	}
-
-	public void setMode(String mode) {
-		this.mode = mode;
-	}
+//
+//	public String getMode() {
+//		return mode;
+//	}
+//
+//	public void setMode(String mode) {
+//		this.mode = mode;
+//	}
 
 
 	public Long getId() {

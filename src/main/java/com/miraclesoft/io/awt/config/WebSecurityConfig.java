@@ -58,7 +58,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	             "/swagger-resources/**",  
 	             "/swagger-ui.html", 
 	             "/webjars/**" ,
-	              /*Probably not needed*/ "/swagger.json").permitAll().
+	              /*Probably not needed*/ "/swagger.json",
+	             "/api/medications/addPP","/api/medications/addPPD","/api/medications/addmedication","/app/userid/{id}").permitAll().
 		// all other requests need to be authenticated
 		anyRequest().authenticated().and().
 		// make sure we use stateless session; session won't be used to
