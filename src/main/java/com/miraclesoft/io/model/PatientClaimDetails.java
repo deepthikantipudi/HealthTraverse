@@ -15,7 +15,7 @@ import javax.validation.constraints.Size;
 @Table(name="PATIENT_CLAIM_DETAILS")
 public class PatientClaimDetails {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="CLAIM_ID")
 	private long claimId;
 	@Column(name="PID")

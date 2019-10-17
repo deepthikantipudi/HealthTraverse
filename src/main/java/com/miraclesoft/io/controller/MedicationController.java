@@ -78,7 +78,7 @@ public class MedicationController {
 	 
 	 
 	 @GetMapping(value="/getmedpres",produces=MediaType.APPLICATION_JSON_VALUE)
-	    public List<MedPrescriptionDTO> fetchMedications(@Value("${fetchAllPres}") String query) throws Exception {
+	    public List<Object[]> fetchMedications(@Value("${fetchAllPres}") String query) throws Exception {
 		 System.out.println("fetching records from database....");
 		 return medrepo.fetchMedications(query);
 		 

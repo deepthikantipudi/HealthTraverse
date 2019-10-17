@@ -1,10 +1,13 @@
 package com.miraclesoft.io.model;
 
+import java.util.Arrays;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
@@ -12,8 +15,8 @@ import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-@Entity
-@Table(name="HEALTHCARE")
+@Entity(name="healthcare")
+@Table(name="HEALTHCARE")      //,schema = "targetSchemaName"
 public class HealthCare {
 	
 	@Id
@@ -21,19 +24,20 @@ public class HealthCare {
 	@Column(name="CONDITIONTYPE_ID")
 	private Long conditionTypeId;
 	
-	@OneToOne
-	@JsonIgnore
-	private MedicalConditions medicalConditions;
+//	@OneToOne
+//	@JsonIgnore
+//	private MedicalConditions medicalConditions;
 	
 	@Column(name="LINK_TO_API")
 	@NotNull
 	@NotEmpty
 	private String linkToApi;
 	
-	@Column(name="IMAGE_LINK")
+	@Column(name="IMAGE_LINK" , columnDefinition = "BLOB")
 	@NotNull
 	@NotEmpty
-	private String imageLink;
+	@Lob
+	private byte[] image;
 	
 	
 	
@@ -42,11 +46,11 @@ public class HealthCare {
 	}
 	
 
-	public HealthCare(Long conditionTypeId, String linkToApi, String imageLink) {
+	public HealthCare(Long conditionTypeId, String linkToApi, @NotNull @NotEmpty @NotNull @NotEmpty byte[] image) {
 		super();
 		this.conditionTypeId = conditionTypeId;
 		this.linkToApi = linkToApi;
-		this.imageLink = imageLink;
+		this.image = image;
 		
 	}
 
@@ -66,16 +70,23 @@ public class HealthCare {
 		this.linkToApi = linkToApi;
 	}
 
-	public String getImageLink() {
-		return imageLink;
+	public @NotNull @NotEmpty @NotNull @NotEmpty byte[] getImage() {
+		return image;
 	}
 
-	public void setImageLink(String imageLink) {
-		this.imageLink = imageLink;
+	public void setImage(@NotNull @NotEmpty @NotNull @NotEmpty byte[] image) {
+		this.image = image;
 	}
 
+
+	@Override
+	public String toString() {
+		return "HealthCare [conditionTypeId=" + conditionTypeId + ", linkToApi=" + linkToApi + ", image="
+				+ Arrays.toString(image) + "]";
+	}
+
+
 	
-	
-	
+
 	
 }
