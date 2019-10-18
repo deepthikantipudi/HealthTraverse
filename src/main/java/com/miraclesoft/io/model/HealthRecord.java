@@ -8,9 +8,10 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 @Entity
-@Table(name="HealthRecord")
+@Table(name="HEALTH_RECORD")
 public class HealthRecord {
 	
 	@Id
@@ -18,14 +19,21 @@ public class HealthRecord {
 	@Column(name="ID") 
 	private long id;
 
-	@ManyToOne
-	@JoinColumn(name = "USER_ID")
-	private Users user_id;
+//	@ManyToOne
+//	@JoinColumn(name = "USER_ID")
+//	private Users user_id;
+//
+//	@ManyToOne
+//	@JoinColumn(name = "PID")
+//	private PatientProfile pid;
 
-	@ManyToOne
-	@JoinColumn(name = "PID")
-	private PatientProfile pid;
-
+	@Column(name="PID")
+	private long pId;
+	
+	@Column(name="USER_ID")
+	private long userId;
+	
+	
 	@Column(name="FILE_NAME")
 	private String fileName;
 	
@@ -42,29 +50,6 @@ public class HealthRecord {
 		super();
 	}
 
-	public HealthRecord(Users user_id, PatientProfile pid, String fileName, String fileURI, String fileType,
-			long size) {
-		super();
-		this.user_id = user_id;
-		this.pid = pid;
-		this.fileName = fileName;
-		this.fileURI = fileURI;
-		this.fileType = fileType;
-		this.size = size;
-	}
-
-	public HealthRecord(long id, Users user_id, PatientProfile pid, String fileName, String fileURI,
-			String fileType, long size) {
-		super();
-		this.id = id;
-		this.user_id = user_id;
-		this.pid = pid;
-		this.fileName = fileName;
-		this.fileURI = fileURI;
-		this.fileType = fileType;
-		this.size = size;
-	}
-
 	public long getId() {
 		return id;
 	}
@@ -73,20 +58,20 @@ public class HealthRecord {
 		this.id = id;
 	}
 
-	public Users getUser_id() {
-		return user_id;
+	public long getpId() {
+		return pId;
 	}
 
-	public void setUser_id(Users user_id) {
-		this.user_id = user_id;
+	public void setpId(long pId) {
+		this.pId = pId;
 	}
 
-	public PatientProfile getPid() {
-		return pid;
+	public long getUserId() {
+		return userId;
 	}
 
-	public void setPid(PatientProfile pid) {
-		this.pid = pid;
+	public void setUserId(long userId) {
+		this.userId = userId;
 	}
 
 	public String getFileName() {
@@ -123,9 +108,22 @@ public class HealthRecord {
 
 	@Override
 	public String toString() {
-		return "HealthRecord [id=" + id + ", user_id=" + user_id + ", pid=" + pid + ", fileName=" + fileName
+		return "HealthRecord [id=" + id + ", pId=" + pId + ", userId=" + userId + ", fileName=" + fileName
 				+ ", fileURI=" + fileURI + ", fileType=" + fileType + ", size=" + size + "]";
 	}
+
+	public HealthRecord(long pId, long userId, String fileName, String fileURI, String fileType, long size) {
+		super();
+		this.pId = pId;
+		this.userId = userId;
+		this.fileName = fileName;
+		this.fileURI = fileURI;
+		this.fileType = fileType;
+		this.size = size;
+	}
+
+	
+	
 	
 	
 }

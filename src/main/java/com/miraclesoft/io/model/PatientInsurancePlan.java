@@ -8,14 +8,29 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
+import org.hibernate.annotations.*;
 
 @Entity
 @Table(name="PATIENT_INSURANCE_PLAN")
 public class PatientInsurancePlan {
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name="INSURANCE_ID")
+//	@Id
+//	@GeneratedValue(strategy = GenerationType.AUTO)
+//	@Column(name="INSURANCE_ID")
+	
+	 @Id
+	    @GeneratedValue(generator = "sequence-generator")
+	    @GenericGenerator(
+	      name = "sequence-generator",
+	      strategy = "org.hibernate.id.enhanced.SequenceStyleGenerator",
+	      parameters = {
+	        @Parameter(name = "sequence_name", value = "pinsuplan_sequence"),
+	        @Parameter(name = "initial_value", value = "1000"),
+	        @Parameter(name = "increment_size", value = "1")
+	        }
+	    )
+	   
 	private int insuranceId;
+	 
 	@Column(name="PID")
 	@NotNull
 	private long pId;

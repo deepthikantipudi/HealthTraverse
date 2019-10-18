@@ -13,31 +13,39 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
 @Entity
-@Table(name="USERS_DETAILS")
+@Table(name="USER_EXTENDED_DETAILS")
 public class UserDetail {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Integer userid;
+	private int id;
 	
-	@Column
+	@Column(name="USER_ID")
+	private long userId;
+	
+	@Column(name="AGE")
 	@Min(message = "AGE min val is 10", value = 10)
 	@NotNull(message = "Please provide age of the person")
 	private int age;
-	@Column
+	@Column(name="HEIGHT")
 	private int height;
-	@Column
+	@Column(name="WEIGHT")
 	private int weight;
-	
-	public UserDetail(Integer age) {
-		this.age = age;
+	@Column(name="GENDER")
+	private String GENDER;
+	@Column(name="dob")
+	private String dob;
+	public int getId() {
+		return id;
 	}
-	
-	public Integer getUserid() {
-		return userid;
+	public void setId(int id) {
+		this.id = id;
 	}
-	public void setUserid(Integer userid) {
-		this.userid = userid;
+	public long getUserId() {
+		return userId;
+	}
+	public void setUserId(long userId) {
+		this.userId = userId;
 	}
 	public int getAge() {
 		return age;
@@ -57,8 +65,43 @@ public class UserDetail {
 	public void setWeight(int weight) {
 		this.weight = weight;
 	}
+	public String getGENDER() {
+		return GENDER;
+	}
+	public void setGENDER(String gENDER) {
+		GENDER = gENDER;
+	}
+	public String getDob() {
+		return dob;
+	}
+	public void setDob(String dob) {
+		this.dob = dob;
+	}
+	@Override
+	public String toString() {
+		return "UserDetail [id=" + id + ", userId=" + userId + ", age=" + age + ", height=" + height + ", weight="
+				+ weight + ", GENDER=" + GENDER + ", dob=" + dob + "]";
+	}
+	public UserDetail(int id, long userId,
+			@Min(message = "AGE min val is 10", value = 10) @NotNull(message = "Please provide age of the person") int age,
+			int height, int weight, String gENDER, String dob) {
+		super();
+		this.id = id;
+		this.userId = userId;
+		this.age = age;
+		this.height = height;
+		this.weight = weight;
+		GENDER = gENDER;
+		this.dob = dob;
+	}
 	public UserDetail() {
 		super();
+		// TODO Auto-generated constructor stub
 	}
+	
+	
+	
+	
+	
 	
 }

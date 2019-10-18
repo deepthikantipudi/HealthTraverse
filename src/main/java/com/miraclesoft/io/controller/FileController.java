@@ -24,13 +24,11 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.miraclesoft.io.model.HealthRecord;
-import com.miraclesoft.io.model.PatientProfile;
-import com.miraclesoft.payload.UploadFileResponse;
-import com.miraclesoft.io.repository.HealthRepository;
 import com.miraclesoft.io.services.FileStorageService;
 import com.miraclesoft.io.services.HealthService;
 import com.miraclesoft.io.services.PatientService;
 import com.miraclesoft.io.services.UserService;
+import com.miraclesoft.payload.UploadFileResponse;
 @CrossOrigin(origins="*")
 @RestController
 public class FileController {
@@ -58,7 +56,9 @@ public class FileController {
 		LOG.info(" file download URI: "+fileDownloadUri);
 		//UserDetails ud =new UserDetails();
 		//PatientProfile patProf = new PatientProfile();
-		HealthRecord saveHealthRecord = healthService.saveHealthRecord(new HealthRecord(userService.getUserById(1),patientService.getPatientById(2) ,fileName, fileDownloadUri, file.getContentType(), file.getSize() ));
+		long pId=1;
+		long userId=1;
+		HealthRecord saveHealthRecord = healthService.saveHealthRecord(new HealthRecord(pId,userId,fileName, fileDownloadUri, file.getContentType(), file.getSize() ));
 		System.out.println(saveHealthRecord.toString());
 		LOG.info("File link saved to database");
 		return new UploadFileResponse(fileName, fileDownloadUri, file.getContentType(), file.getSize());

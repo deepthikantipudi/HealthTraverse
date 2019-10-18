@@ -26,7 +26,7 @@ public class UserController {
 	UserService userService;
 
 	@RequestMapping(method = RequestMethod.GET, value = "/userid/{id}")
-	public UserDetail getUserWithId(@Min(1) @PathVariable Integer id) {
+	public UserDetail getUserWithId(@Min(1) @PathVariable long id) {
 
 		return userService.getUserWithId(id);
 	}

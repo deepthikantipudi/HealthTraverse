@@ -9,6 +9,6 @@ import com.miraclesoft.io.model.UserDetail;
 @Transactional(readOnly = true)
 public interface UserRepository extends JpaRepository<UserDetail, Integer> {
 
-	@Query("SELECT u FROM UserDetail u WHERE u.userid = ?1")
-	public UserDetail getUserWithId(Integer id);
+	@Query("SELECT u FROM UserDetail u WHERE u.userId = ?1")
+	public UserDetail getUserWithId(long id);
 }

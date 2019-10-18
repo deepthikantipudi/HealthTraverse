@@ -11,11 +11,26 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Parameter;
+
 @Entity
 @Table(name="PATIENT_CLAIM_DETAILS")
 public class PatientClaimDetails {
+//	@Id
+//	@GeneratedValue(strategy = GenerationType.AUTO)
+	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(generator = "sequence-generator")
+    @GenericGenerator(
+      name = "sequence-generator",
+      strategy = "org.hibernate.id.enhanced.SequenceStyleGenerator",
+      parameters = {
+        @Parameter(name = "sequence_name", value = "pclaimdetails_sequence"),
+        @Parameter(name = "initial_value", value = "1000"),
+        @Parameter(name = "increment_size", value = "1")
+        }
+    )
 	@Column(name="CLAIM_ID")
 	private long claimId;
 	@Column(name="PID")

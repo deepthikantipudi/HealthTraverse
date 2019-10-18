@@ -52,7 +52,7 @@ public class UserService {
         return this.userRepository.save(user);
     }
     
-    public UserDetail getUserWithId(Integer id) {
+    public UserDetail getUserWithId(long id) {
     	return this.userRepository.getUserWithId(id);
     }
     
