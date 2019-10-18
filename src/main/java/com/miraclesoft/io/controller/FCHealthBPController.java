@@ -1,6 +1,7 @@
 package com.miraclesoft.io.controller;
 
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -54,17 +55,22 @@ public class FCHealthBPController {
 	   }
 
 	   @GetMapping(value="/CurrentBP/{patientId}",produces=MediaType.APPLICATION_JSON_VALUE)
-	   public ResponseEntity<FCHealthBP>  recentBpOfPatient(@PathVariable("patientId") long patientId, @Value("${highBpQuery}") String query1, @Value("${lowBpQuery}") String query2) {
+	   public ResponseEntity<?>  recentBpOfPatient(@PathVariable("patientId") long patientId, @Value("${highBpQuery}") String query1, @Value("${lowBpQuery}") String query2) {
 		   long highBp = bpRepository.findRecentValueByPid(patientId, query1);
 		   long lowBp = bpRepository.findRecentValueByPid(patientId, query2);
+		   
 		   if(highBp != 0 && lowBp != 0  ) {
 			   fchealthBp.setHighBP(highBp);
 			   fchealthBp.setLowBP(lowBp);
 			   System.out.println(fchealthBp);
 			return new ResponseEntity<>(fchealthBp, HttpStatus.OK);
 		}
-		   else
-			   return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
+		   else{
+			   HashMap<String, Object> map = new HashMap<>();
+			   map.put("ErrorResponse", "No Patient");
+			    return new ResponseEntity<>(map, HttpStatus.NOT_FOUND);
+			  
+		   }
 	   }
 	   
 	   @GetMapping(value="/AverageBP/{patientId}/{year}", produces=MediaType.APPLICATION_JSON_VALUE)

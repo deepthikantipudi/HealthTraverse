@@ -1,6 +1,7 @@
 package com.miraclesoft.io.controller;
 
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -93,13 +94,25 @@ public class FCHealthWeightContoller {
 //	  
 
 	   @GetMapping(value="/CurrentWeight/{patientId}",produces=MediaType.APPLICATION_JSON_VALUE)
-	   public ResponseEntity<?>  recentWeightOfPatient(@PathVariable("patientId") long patientId, @Value("${weightQuery}") String query) {
+	   public ResponseEntity<?> recentWeightOfPatient(@PathVariable("patientId") long patientId, @Value("${weightQuery}") String query) {
 		  // System.out.println (query);
 		   long valueByPid = weightRepository.findRecentValueByPid(patientId, query);
-		   if(valueByPid != 0)
-			   return new ResponseEntity<>(valueByPid, HttpStatus.OK);
-		   else
-			    return new ResponseEntity<>("No Patient", HttpStatus.BAD_REQUEST);
+		   
+		   HashMap<String, Object> map = new HashMap<>();
+
+//		    map.put("currentWeight", valueByPid);
+
+		   
+		   if(valueByPid != 0) {
+			   map.put("currentWeight", valueByPid);
+			   return new ResponseEntity<>(map, HttpStatus.OK);
+		   }
+		   else {
+			   map.put("ErrorResponse", "No Patient");
+			    return new ResponseEntity<>(map, HttpStatus.NOT_FOUND);
+			  
+		   }
+			   
 	   }
 	   
 	   @GetMapping(value="/AverageWeight/{patientId}/{year}", produces=MediaType.APPLICATION_JSON_VALUE)

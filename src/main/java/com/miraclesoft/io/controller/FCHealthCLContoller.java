@@ -1,11 +1,14 @@
 package com.miraclesoft.io.controller;
 
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -51,16 +54,24 @@ public class FCHealthCLContoller {
 	   }
 
 	   @GetMapping("/CurrentCL/{patientId}")
-	   public String recentClOfPatient(@PathVariable("patientId") long patientId, @Value("${clQuery}") String query) {
+	   public ResponseEntity<?> recentClOfPatient(@PathVariable("patientId") long patientId, @Value("${clQuery}") String query) throws Exception {
 		  // System.out.println (query);
 		   
 		   long valueByPid = clRepository.findRecentValueByPid(patientId, query);
-		   System.out.println (valueByPid);
-		   if(valueByPid != 0)
-			   return valueByPid+"";
-		   else
-			   return "No Patient Available";
+		   HashMap<String, Object> map = new HashMap<>();
+
+		   if(valueByPid != 0) {
+			
+			   map.put("currentCholestrol", valueByPid);
+			   return new ResponseEntity<>(map, HttpStatus.OK);
+		   }
+		   else {
+			
+			   map.put("ErrorResponse", "No Patient");
+			    return new ResponseEntity<>(map, HttpStatus.NOT_FOUND);
+		   }
 	   }
+	   
 	   @GetMapping(value="/AverageCL/{patientId}/{year}", produces=MediaType.APPLICATION_JSON_VALUE)
 	   public List<AverageCholestrolEntity> getAverageCholestrolValues(@PathVariable("patientId") long patientId,@PathVariable("year") int year,@Value("${avgCL}") String query) throws Exception{
 		   List<AverageCholestrolEntity> result = clRepository.findCholestrolAverageValues(patientId, query, year);
