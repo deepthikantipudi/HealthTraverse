@@ -2788,3 +2788,1029 @@ com.microsoft.sqlserver.jdbc.SQLServerException: Invalid column name 'clDate'.
 2019-10-18 17:20:26.094  INFO DESKTOP-REML5DB --- [nio-8080-exec-2] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2019-10-18 17:20:26.094  INFO DESKTOP-REML5DB --- [nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
 2019-10-18 17:20:26.103  INFO DESKTOP-REML5DB --- [nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Completed initialization in 9 ms
+2019-10-21 09:35:39.465  WARN DESKTOP-REML5DB --- [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2d15h26m23s719ms261µs100ns).
+2019-10-21 11:10:02.211  INFO DESKTOP-REML5DB --- [           main] c.m.i.WorkshopApplication                : Starting WorkshopApplication on DESKTOP-REML5DB with PID 16700 (C:\Users\Miracle\Desktop\WorkShop\health-care\target\classes started by Miracle in C:\Users\Miracle\Desktop\WorkShop\health-care)
+2019-10-21 11:10:02.216  INFO DESKTOP-REML5DB --- [           main] c.m.i.WorkshopApplication                : The following profiles are active: dev
+2019-10-21 11:10:03.070  INFO DESKTOP-REML5DB --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-21 11:10:03.184  INFO DESKTOP-REML5DB --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 108ms. Found 18 repository interfaces.
+2019-10-21 11:10:03.453  INFO DESKTOP-REML5DB --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$50efeaae] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-21 11:10:03.642  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2019-10-21 11:10:03.652  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+2019-10-21 11:10:03.661  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-10-21 11:10:03.661  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-21 11:10:04.355  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-10-21 11:10:04.355  INFO DESKTOP-REML5DB --- [           main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 2112 ms
+2019-10-21 11:10:04.569  INFO DESKTOP-REML5DB --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2019-10-21 11:10:06.327  INFO DESKTOP-REML5DB --- [           main] c.z.h.p.PoolBase                         : HikariPool-1 - Driver does not support get/set network timeout for connections. (This operation is not supported.)
+2019-10-21 11:10:06.617  INFO DESKTOP-REML5DB --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2019-10-21 11:10:06.665  INFO DESKTOP-REML5DB --- [           main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-10-21 11:10:06.711  INFO DESKTOP-REML5DB --- [           main] o.h.Version                              : HHH000412: Hibernate Core {5.3.11.Final}
+2019-10-21 11:10:06.712  INFO DESKTOP-REML5DB --- [           main] o.h.c.Environment                        : HHH000206: hibernate.properties not found
+2019-10-21 11:10:06.808  INFO DESKTOP-REML5DB --- [           main] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-10-21 11:10:06.930  INFO DESKTOP-REML5DB --- [           main] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2019-10-21 11:10:08.133  WARN DESKTOP-REML5DB --- [           main] o.h.b.i.InFlightMetadataCollectorImpl    : HHH000069: Duplicate generator name sequence-generator
+2019-10-21 11:10:08.624  INFO DESKTOP-REML5DB --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-21 11:10:09.219  INFO DESKTOP-REML5DB --- [           main] c.m.i.s.FileStorageService               : Inside FileStorageService Constructor
+2019-10-21 11:10:09.219  INFO DESKTOP-REML5DB --- [           main] c.m.i.s.FileStorageService               : About to create file storage location as mentioned in properties file
+2019-10-21 11:10:09.252  INFO DESKTOP-REML5DB --- [           main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-10-21 11:10:09.801  WARN DESKTOP-REML5DB --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-10-21 11:10:09.915  INFO DESKTOP-REML5DB --- [           main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-10-21 11:10:10.015  INFO DESKTOP-REML5DB --- [           main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-21 11:10:10.381  INFO DESKTOP-REML5DB --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-10-21 11:10:10.396  INFO DESKTOP-REML5DB --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-10-21 11:10:10.425  INFO DESKTOP-REML5DB --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-10-21 11:10:10.532  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_1
+2019-10-21 11:10:10.541  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_2
+2019-10-21 11:10:10.547  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_3
+2019-10-21 11:10:10.555  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_4
+2019-10-21 11:10:10.616  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: fetchMedicationsUsingGET_1
+2019-10-21 11:10:10.635  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+2019-10-21 11:10:10.649  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-21 11:10:10.729  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8085 (http)
+2019-10-21 11:10:10.730  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8085"]
+2019-10-21 11:10:10.730  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-10-21 11:10:10.730  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-21 11:10:10.747  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-10-21 11:10:10.748  INFO DESKTOP-REML5DB --- [           main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 97 ms
+2019-10-21 11:10:10.765  INFO DESKTOP-REML5DB --- [           main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-10-21 11:10:10.811  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8085"]
+2019-10-21 11:10:10.813  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8085 (http) with context path ''
+2019-10-21 11:10:10.815  INFO DESKTOP-REML5DB --- [           main] c.m.i.WorkshopApplication                : Started WorkshopApplication in 8.828 seconds (JVM running for 13.126)
+2019-10-21 11:10:13.449  INFO DESKTOP-REML5DB --- [nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-21 11:10:13.450  INFO DESKTOP-REML5DB --- [nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2019-10-21 11:10:13.458  INFO DESKTOP-REML5DB --- [nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 8 ms
+2019-10-21 11:10:14.378  WARN DESKTOP-REML5DB --- [nio-8080-exec-1] o.h.e.j.s.SqlExceptionHelper             : SQL Error: 207, SQLState: S0001
+2019-10-21 11:10:14.379 ERROR DESKTOP-REML5DB --- [nio-8080-exec-1] o.h.e.j.s.SqlExceptionHelper             : Invalid column name 'glDate'.
+2019-10-21 11:10:14.973 ERROR DESKTOP-REML5DB --- [nio-8080-exec-1] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: could not extract ResultSet] with root cause
+com.microsoft.sqlserver.jdbc.SQLServerException: Invalid column name 'glDate'.
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:232)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.getNextResult(SQLServerStatement.java:1672)
+	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement.doExecutePreparedStatement(SQLServerPreparedStatement.java:460)
+	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement$PrepStmtExecCmd.doExecute(SQLServerPreparedStatement.java:405)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:7535)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:2438)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeCommand(SQLServerStatement.java:208)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeStatement(SQLServerStatement.java:183)
+	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement.executeQuery(SQLServerPreparedStatement.java:317)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:60)
+	at org.hibernate.loader.Loader.getResultSet(Loader.java:2265)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:2028)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1990)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:949)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:351)
+	at org.hibernate.loader.Loader.doList(Loader.java:2787)
+	at org.hibernate.loader.Loader.doList(Loader.java:2770)
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2604)
+	at org.hibernate.loader.Loader.list(Loader.java:2599)
+	at org.hibernate.loader.custom.CustomLoader.list(CustomLoader.java:338)
+	at org.hibernate.internal.SessionImpl.listCustomQuery(SessionImpl.java:2254)
+	at org.hibernate.internal.AbstractSharedSessionContract.list(AbstractSharedSessionContract.java:1069)
+	at org.hibernate.query.internal.NativeQueryImpl.doList(NativeQueryImpl.java:170)
+	at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1506)
+	at org.hibernate.query.Query.getResultList(Query.java:132)
+	at com.miraclesoft.io.repository.CustomFCHRepositoryImpl.findGlucoseAverageValues(CustomFCHRepositoryImpl.java:127)
+	at com.miraclesoft.io.repository.CustomFCHRepositoryImpl$$FastClassBySpringCGLIB$$907d2588.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:295)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.miraclesoft.io.repository.CustomFCHRepositoryImpl$$EnhancerBySpringCGLIB$$c6d8b051.findGlucoseAverageValues(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:359)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:200)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:644)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:608)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$invoke$3(RepositoryFactorySupport.java:595)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:595)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:59)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:295)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:144)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$ExposeRepositoryInvocationInterceptor.invoke(CrudMethodMetadataPostProcessor.java:364)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.SurroundingTransactionDetectorMethodInterceptor.invoke(SurroundingTransactionDetectorMethodInterceptor.java:61)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy142.findGlucoseAverageValues(Unknown Source)
+	at com.miraclesoft.io.controller.FCHealthGLContoller.getAverageGlucoseValues(FCHealthGLContoller.java:85)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.web.trace.servlet.HttpTraceFilter.doFilterInternal(HttpTraceFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.filterAndRecordMetrics(WebMvcMetricsFilter.java:114)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:104)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Unknown Source)
+2019-10-21 11:11:39.774  INFO DESKTOP-REML5DB --- [           main] c.m.i.WorkshopApplication                : Starting WorkshopApplication on DESKTOP-REML5DB with PID 19276 (C:\Users\Miracle\Desktop\WorkShop\health-care\target\classes started by Miracle in C:\Users\Miracle\Desktop\WorkShop\health-care)
+2019-10-21 11:11:39.778  INFO DESKTOP-REML5DB --- [           main] c.m.i.WorkshopApplication                : The following profiles are active: dev
+2019-10-21 11:11:40.583  INFO DESKTOP-REML5DB --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-21 11:11:40.704  INFO DESKTOP-REML5DB --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 113ms. Found 18 repository interfaces.
+2019-10-21 11:11:40.980  INFO DESKTOP-REML5DB --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f36f22ca] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-21 11:11:41.168  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2019-10-21 11:11:41.179  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+2019-10-21 11:11:41.185  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-10-21 11:11:41.185  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-21 11:11:41.300  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-10-21 11:11:41.300  INFO DESKTOP-REML5DB --- [           main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 1496 ms
+2019-10-21 11:11:41.546  INFO DESKTOP-REML5DB --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2019-10-21 11:11:43.245  INFO DESKTOP-REML5DB --- [           main] c.z.h.p.PoolBase                         : HikariPool-1 - Driver does not support get/set network timeout for connections. (This operation is not supported.)
+2019-10-21 11:11:43.563  INFO DESKTOP-REML5DB --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2019-10-21 11:11:43.611  INFO DESKTOP-REML5DB --- [           main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-10-21 11:11:43.657  INFO DESKTOP-REML5DB --- [           main] o.h.Version                              : HHH000412: Hibernate Core {5.3.11.Final}
+2019-10-21 11:11:43.659  INFO DESKTOP-REML5DB --- [           main] o.h.c.Environment                        : HHH000206: hibernate.properties not found
+2019-10-21 11:11:43.755  INFO DESKTOP-REML5DB --- [           main] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-10-21 11:11:43.877  INFO DESKTOP-REML5DB --- [           main] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2019-10-21 11:11:45.063  WARN DESKTOP-REML5DB --- [           main] o.h.b.i.InFlightMetadataCollectorImpl    : HHH000069: Duplicate generator name sequence-generator
+2019-10-21 11:11:45.548  INFO DESKTOP-REML5DB --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-21 11:11:46.123  INFO DESKTOP-REML5DB --- [           main] c.m.i.s.FileStorageService               : Inside FileStorageService Constructor
+2019-10-21 11:11:46.123  INFO DESKTOP-REML5DB --- [           main] c.m.i.s.FileStorageService               : About to create file storage location as mentioned in properties file
+2019-10-21 11:11:46.156  INFO DESKTOP-REML5DB --- [           main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-10-21 11:11:46.700  WARN DESKTOP-REML5DB --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-10-21 11:11:46.826  INFO DESKTOP-REML5DB --- [           main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-10-21 11:11:46.939  INFO DESKTOP-REML5DB --- [           main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-21 11:11:47.384  INFO DESKTOP-REML5DB --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-10-21 11:11:47.399  INFO DESKTOP-REML5DB --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-10-21 11:11:47.429  INFO DESKTOP-REML5DB --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-10-21 11:11:47.547  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_1
+2019-10-21 11:11:47.558  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_2
+2019-10-21 11:11:47.564  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_3
+2019-10-21 11:11:47.574  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_4
+2019-10-21 11:11:47.644  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: fetchMedicationsUsingGET_1
+2019-10-21 11:11:47.666  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+2019-10-21 11:11:47.684  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-21 11:11:47.764  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8085 (http)
+2019-10-21 11:11:47.765  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8085"]
+2019-10-21 11:11:47.765  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-10-21 11:11:47.765  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-21 11:11:47.785  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-10-21 11:11:47.785  INFO DESKTOP-REML5DB --- [           main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 96 ms
+2019-10-21 11:11:47.807  INFO DESKTOP-REML5DB --- [           main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-10-21 11:11:47.861  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8085"]
+2019-10-21 11:11:47.863  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8085 (http) with context path ''
+2019-10-21 11:11:47.865  INFO DESKTOP-REML5DB --- [           main] c.m.i.WorkshopApplication                : Started WorkshopApplication in 8.317 seconds (JVM running for 9.149)
+2019-10-21 11:11:51.129  INFO DESKTOP-REML5DB --- [nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-21 11:11:51.129  INFO DESKTOP-REML5DB --- [nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2019-10-21 11:11:51.135  INFO DESKTOP-REML5DB --- [nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 6 ms
+2019-10-21 11:11:52.039  WARN DESKTOP-REML5DB --- [nio-8080-exec-1] o.h.e.j.s.SqlExceptionHelper             : SQL Error: 207, SQLState: S0001
+2019-10-21 11:11:52.040 ERROR DESKTOP-REML5DB --- [nio-8080-exec-1] o.h.e.j.s.SqlExceptionHelper             : Invalid column name 'glDate'.
+2019-10-21 11:11:52.584 ERROR DESKTOP-REML5DB --- [nio-8080-exec-1] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: could not extract ResultSet] with root cause
+com.microsoft.sqlserver.jdbc.SQLServerException: Invalid column name 'glDate'.
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:232)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.getNextResult(SQLServerStatement.java:1672)
+	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement.doExecutePreparedStatement(SQLServerPreparedStatement.java:460)
+	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement$PrepStmtExecCmd.doExecute(SQLServerPreparedStatement.java:405)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:7535)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:2438)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeCommand(SQLServerStatement.java:208)
+	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeStatement(SQLServerStatement.java:183)
+	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement.executeQuery(SQLServerPreparedStatement.java:317)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:60)
+	at org.hibernate.loader.Loader.getResultSet(Loader.java:2265)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:2028)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1990)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:949)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:351)
+	at org.hibernate.loader.Loader.doList(Loader.java:2787)
+	at org.hibernate.loader.Loader.doList(Loader.java:2770)
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2604)
+	at org.hibernate.loader.Loader.list(Loader.java:2599)
+	at org.hibernate.loader.custom.CustomLoader.list(CustomLoader.java:338)
+	at org.hibernate.internal.SessionImpl.listCustomQuery(SessionImpl.java:2254)
+	at org.hibernate.internal.AbstractSharedSessionContract.list(AbstractSharedSessionContract.java:1069)
+	at org.hibernate.query.internal.NativeQueryImpl.doList(NativeQueryImpl.java:170)
+	at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1506)
+	at org.hibernate.query.Query.getResultList(Query.java:132)
+	at com.miraclesoft.io.repository.CustomFCHRepositoryImpl.findGlucoseAverageValues(CustomFCHRepositoryImpl.java:127)
+	at com.miraclesoft.io.repository.CustomFCHRepositoryImpl$$FastClassBySpringCGLIB$$907d2588.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:295)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.miraclesoft.io.repository.CustomFCHRepositoryImpl$$EnhancerBySpringCGLIB$$b6180626.findGlucoseAverageValues(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:359)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:200)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:644)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:608)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$invoke$3(RepositoryFactorySupport.java:595)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:595)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:59)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:295)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:144)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$ExposeRepositoryInvocationInterceptor.invoke(CrudMethodMetadataPostProcessor.java:364)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.SurroundingTransactionDetectorMethodInterceptor.invoke(SurroundingTransactionDetectorMethodInterceptor.java:61)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy142.findGlucoseAverageValues(Unknown Source)
+	at com.miraclesoft.io.controller.FCHealthGLContoller.getAverageGlucoseValues(FCHealthGLContoller.java:85)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.web.trace.servlet.HttpTraceFilter.doFilterInternal(HttpTraceFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.filterAndRecordMetrics(WebMvcMetricsFilter.java:114)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:104)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Unknown Source)
+2019-10-21 11:12:32.597  INFO DESKTOP-REML5DB --- [           main] c.m.i.WorkshopApplication                : Starting WorkshopApplication on DESKTOP-REML5DB with PID 20960 (C:\Users\Miracle\Desktop\WorkShop\health-care\target\classes started by Miracle in C:\Users\Miracle\Desktop\WorkShop\health-care)
+2019-10-21 11:12:32.602  INFO DESKTOP-REML5DB --- [           main] c.m.i.WorkshopApplication                : The following profiles are active: dev
+2019-10-21 11:12:33.376  INFO DESKTOP-REML5DB --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-21 11:12:33.481  INFO DESKTOP-REML5DB --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 100ms. Found 18 repository interfaces.
+2019-10-21 11:12:33.733  INFO DESKTOP-REML5DB --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$da77a69e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-21 11:12:33.925  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2019-10-21 11:12:33.935  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+2019-10-21 11:12:33.943  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-10-21 11:12:33.943  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-21 11:12:34.103  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-10-21 11:12:34.103  INFO DESKTOP-REML5DB --- [           main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 1475 ms
+2019-10-21 11:12:34.303  INFO DESKTOP-REML5DB --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2019-10-21 11:12:35.954  INFO DESKTOP-REML5DB --- [           main] c.z.h.p.PoolBase                         : HikariPool-1 - Driver does not support get/set network timeout for connections. (This operation is not supported.)
+2019-10-21 11:12:36.279  INFO DESKTOP-REML5DB --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2019-10-21 11:12:36.325  INFO DESKTOP-REML5DB --- [           main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-10-21 11:12:36.372  INFO DESKTOP-REML5DB --- [           main] o.h.Version                              : HHH000412: Hibernate Core {5.3.11.Final}
+2019-10-21 11:12:36.373  INFO DESKTOP-REML5DB --- [           main] o.h.c.Environment                        : HHH000206: hibernate.properties not found
+2019-10-21 11:12:36.472  INFO DESKTOP-REML5DB --- [           main] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-10-21 11:12:36.596  INFO DESKTOP-REML5DB --- [           main] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2019-10-21 11:12:37.783  WARN DESKTOP-REML5DB --- [           main] o.h.b.i.InFlightMetadataCollectorImpl    : HHH000069: Duplicate generator name sequence-generator
+2019-10-21 11:12:38.257  INFO DESKTOP-REML5DB --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-21 11:12:38.854  INFO DESKTOP-REML5DB --- [           main] c.m.i.s.FileStorageService               : Inside FileStorageService Constructor
+2019-10-21 11:12:38.854  INFO DESKTOP-REML5DB --- [           main] c.m.i.s.FileStorageService               : About to create file storage location as mentioned in properties file
+2019-10-21 11:12:38.890  INFO DESKTOP-REML5DB --- [           main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-10-21 11:12:39.390  WARN DESKTOP-REML5DB --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-10-21 11:12:39.504  INFO DESKTOP-REML5DB --- [           main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-10-21 11:12:39.602  INFO DESKTOP-REML5DB --- [           main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-21 11:12:39.972  INFO DESKTOP-REML5DB --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-10-21 11:12:39.985  INFO DESKTOP-REML5DB --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-10-21 11:12:40.013  INFO DESKTOP-REML5DB --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-10-21 11:12:40.110  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_1
+2019-10-21 11:12:40.119  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_2
+2019-10-21 11:12:40.125  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_3
+2019-10-21 11:12:40.133  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_4
+2019-10-21 11:12:40.197  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: fetchMedicationsUsingGET_1
+2019-10-21 11:12:40.217  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+2019-10-21 11:12:40.232  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-21 11:12:40.304  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8085 (http)
+2019-10-21 11:12:40.304  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8085"]
+2019-10-21 11:12:40.304  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-10-21 11:12:40.305  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-21 11:12:40.321  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-10-21 11:12:40.321  INFO DESKTOP-REML5DB --- [           main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 86 ms
+2019-10-21 11:12:40.339  INFO DESKTOP-REML5DB --- [           main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-10-21 11:12:40.389  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8085"]
+2019-10-21 11:12:40.391  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8085 (http) with context path ''
+2019-10-21 11:12:40.393  INFO DESKTOP-REML5DB --- [           main] c.m.i.WorkshopApplication                : Started WorkshopApplication in 8.02 seconds (JVM running for 8.863)
+2019-10-21 11:12:44.101  INFO DESKTOP-REML5DB --- [nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-21 11:12:44.101  INFO DESKTOP-REML5DB --- [nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2019-10-21 11:12:44.111  INFO DESKTOP-REML5DB --- [nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 10 ms
+2019-10-21 11:17:00.143  INFO DESKTOP-REML5DB --- [on(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-10-21 11:17:00.354  INFO DESKTOP-REML5DB --- [on(2)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor           : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-21 11:17:00.358  INFO DESKTOP-REML5DB --- [on(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-10-21 11:17:00.360  INFO DESKTOP-REML5DB --- [on(2)-127.0.0.1] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2019-10-21 11:17:00.361  INFO DESKTOP-REML5DB --- [on(2)-127.0.0.1] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2019-10-21 11:17:13.036  INFO DESKTOP-REML5DB --- [           main] c.m.i.WorkshopApplication                : Starting WorkshopApplication on DESKTOP-REML5DB with PID 14808 (C:\Users\Miracle\Desktop\WorkShop\health-care\target\classes started by Miracle in C:\Users\Miracle\Desktop\WorkShop\health-care)
+2019-10-21 11:17:13.040  INFO DESKTOP-REML5DB --- [           main] c.m.i.WorkshopApplication                : The following profiles are active: dev
+2019-10-21 11:17:13.821  INFO DESKTOP-REML5DB --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-21 11:17:13.927  INFO DESKTOP-REML5DB --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 101ms. Found 18 repository interfaces.
+2019-10-21 11:17:14.174  INFO DESKTOP-REML5DB --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$794762c7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-21 11:17:14.367  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2019-10-21 11:17:14.378  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+2019-10-21 11:17:14.385  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-10-21 11:17:14.386  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-21 11:17:14.552  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-10-21 11:17:14.552  INFO DESKTOP-REML5DB --- [           main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 1485 ms
+2019-10-21 11:17:14.760  INFO DESKTOP-REML5DB --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2019-10-21 11:17:16.462  INFO DESKTOP-REML5DB --- [           main] c.z.h.p.PoolBase                         : HikariPool-1 - Driver does not support get/set network timeout for connections. (This operation is not supported.)
+2019-10-21 11:17:16.776  INFO DESKTOP-REML5DB --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2019-10-21 11:17:16.825  INFO DESKTOP-REML5DB --- [           main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-10-21 11:17:16.870  INFO DESKTOP-REML5DB --- [           main] o.h.Version                              : HHH000412: Hibernate Core {5.3.11.Final}
+2019-10-21 11:17:16.871  INFO DESKTOP-REML5DB --- [           main] o.h.c.Environment                        : HHH000206: hibernate.properties not found
+2019-10-21 11:17:16.965  INFO DESKTOP-REML5DB --- [           main] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-10-21 11:17:17.086  INFO DESKTOP-REML5DB --- [           main] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2019-10-21 11:17:18.382  WARN DESKTOP-REML5DB --- [           main] o.h.b.i.InFlightMetadataCollectorImpl    : HHH000069: Duplicate generator name sequence-generator
+2019-10-21 11:17:18.884  INFO DESKTOP-REML5DB --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-21 11:17:19.501  INFO DESKTOP-REML5DB --- [           main] c.m.i.s.FileStorageService               : Inside FileStorageService Constructor
+2019-10-21 11:17:19.501  INFO DESKTOP-REML5DB --- [           main] c.m.i.s.FileStorageService               : About to create file storage location as mentioned in properties file
+2019-10-21 11:17:19.539  INFO DESKTOP-REML5DB --- [           main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-10-21 11:17:20.032  WARN DESKTOP-REML5DB --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-10-21 11:17:20.149  INFO DESKTOP-REML5DB --- [           main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-10-21 11:17:20.257  INFO DESKTOP-REML5DB --- [           main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-21 11:17:20.651  INFO DESKTOP-REML5DB --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-10-21 11:17:20.667  INFO DESKTOP-REML5DB --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-10-21 11:17:20.699  INFO DESKTOP-REML5DB --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-10-21 11:17:20.801  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_1
+2019-10-21 11:17:20.810  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_2
+2019-10-21 11:17:20.816  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_3
+2019-10-21 11:17:20.824  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_4
+2019-10-21 11:17:20.888  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: fetchMedicationsUsingGET_1
+2019-10-21 11:17:20.909  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+2019-10-21 11:17:20.924  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-21 11:17:20.997  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8085 (http)
+2019-10-21 11:17:20.997  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8085"]
+2019-10-21 11:17:20.997  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-10-21 11:17:20.997  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-21 11:17:21.015  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-10-21 11:17:21.015  INFO DESKTOP-REML5DB --- [           main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 88 ms
+2019-10-21 11:17:21.033  INFO DESKTOP-REML5DB --- [           main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-10-21 11:17:21.083  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8085"]
+2019-10-21 11:17:21.086  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8085 (http) with context path ''
+2019-10-21 11:17:21.088  INFO DESKTOP-REML5DB --- [           main] c.m.i.WorkshopApplication                : Started WorkshopApplication in 8.273 seconds (JVM running for 9.099)
+2019-10-21 11:17:25.309  INFO DESKTOP-REML5DB --- [nio-8080-exec-2] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-21 11:17:25.309  INFO DESKTOP-REML5DB --- [nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2019-10-21 11:17:25.316  INFO DESKTOP-REML5DB --- [nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Completed initialization in 6 ms
+2019-10-21 11:42:41.575  INFO DESKTOP-REML5DB --- [           main] c.m.i.WorkshopApplication                : Starting WorkshopApplication on DESKTOP-REML5DB with PID 17932 (C:\Users\Miracle\Desktop\WorkShop\health-care\target\classes started by Miracle in C:\Users\Miracle\Desktop\WorkShop\health-care)
+2019-10-21 11:42:41.579  INFO DESKTOP-REML5DB --- [           main] c.m.i.WorkshopApplication                : The following profiles are active: dev
+2019-10-21 11:42:42.358  INFO DESKTOP-REML5DB --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-21 11:42:42.473  INFO DESKTOP-REML5DB --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 100ms. Found 18 repository interfaces.
+2019-10-21 11:42:42.725  INFO DESKTOP-REML5DB --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c4ff9b0f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-21 11:42:42.904  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2019-10-21 11:42:42.914  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+2019-10-21 11:42:42.920  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-10-21 11:42:42.921  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-21 11:42:43.075  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-10-21 11:42:43.075  INFO DESKTOP-REML5DB --- [           main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 1469 ms
+2019-10-21 11:42:43.277  INFO DESKTOP-REML5DB --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2019-10-21 11:42:45.002  INFO DESKTOP-REML5DB --- [           main] c.z.h.p.PoolBase                         : HikariPool-1 - Driver does not support get/set network timeout for connections. (This operation is not supported.)
+2019-10-21 11:42:45.409  INFO DESKTOP-REML5DB --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2019-10-21 11:42:45.459  INFO DESKTOP-REML5DB --- [           main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-10-21 11:42:45.506  INFO DESKTOP-REML5DB --- [           main] o.h.Version                              : HHH000412: Hibernate Core {5.3.11.Final}
+2019-10-21 11:42:45.507  INFO DESKTOP-REML5DB --- [           main] o.h.c.Environment                        : HHH000206: hibernate.properties not found
+2019-10-21 11:42:45.611  INFO DESKTOP-REML5DB --- [           main] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-10-21 11:42:45.743  INFO DESKTOP-REML5DB --- [           main] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2019-10-21 11:42:46.968  WARN DESKTOP-REML5DB --- [           main] o.h.b.i.InFlightMetadataCollectorImpl    : HHH000069: Duplicate generator name sequence-generator
+2019-10-21 11:42:47.465  INFO DESKTOP-REML5DB --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-21 11:42:48.042  INFO DESKTOP-REML5DB --- [           main] c.m.i.s.FileStorageService               : Inside FileStorageService Constructor
+2019-10-21 11:42:48.042  INFO DESKTOP-REML5DB --- [           main] c.m.i.s.FileStorageService               : About to create file storage location as mentioned in properties file
+2019-10-21 11:42:48.078  INFO DESKTOP-REML5DB --- [           main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-10-21 11:42:48.542  WARN DESKTOP-REML5DB --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-10-21 11:42:48.652  INFO DESKTOP-REML5DB --- [           main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-10-21 11:42:48.752  INFO DESKTOP-REML5DB --- [           main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-21 11:42:49.185  INFO DESKTOP-REML5DB --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-10-21 11:42:49.199  INFO DESKTOP-REML5DB --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-10-21 11:42:49.226  INFO DESKTOP-REML5DB --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-10-21 11:42:49.321  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_1
+2019-10-21 11:42:49.330  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_2
+2019-10-21 11:42:49.337  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_3
+2019-10-21 11:42:49.345  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_4
+2019-10-21 11:42:49.411  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: fetchMedicationsUsingGET_1
+2019-10-21 11:42:49.432  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+2019-10-21 11:42:49.448  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-21 11:42:49.523  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8085 (http)
+2019-10-21 11:42:49.523  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8085"]
+2019-10-21 11:42:49.523  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-10-21 11:42:49.524  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-21 11:42:49.540  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-10-21 11:42:49.540  INFO DESKTOP-REML5DB --- [           main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 89 ms
+2019-10-21 11:42:49.558  INFO DESKTOP-REML5DB --- [           main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-10-21 11:42:49.607  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8085"]
+2019-10-21 11:42:49.609  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8085 (http) with context path ''
+2019-10-21 11:42:49.611  INFO DESKTOP-REML5DB --- [           main] c.m.i.WorkshopApplication                : Started WorkshopApplication in 8.274 seconds (JVM running for 9.146)
+2019-10-21 11:44:02.346  INFO DESKTOP-REML5DB --- [nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-21 11:44:02.347  INFO DESKTOP-REML5DB --- [nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2019-10-21 11:44:02.357  INFO DESKTOP-REML5DB --- [nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 10 ms
+2019-10-21 11:59:11.341  INFO DESKTOP-REML5DB --- [           main] c.m.i.WorkshopApplication                : Starting WorkshopApplication on DESKTOP-REML5DB with PID 13828 (C:\Users\Miracle\Desktop\WorkShop\health-care\target\classes started by Miracle in C:\Users\Miracle\Desktop\WorkShop\health-care)
+2019-10-21 11:59:11.346  INFO DESKTOP-REML5DB --- [           main] c.m.i.WorkshopApplication                : The following profiles are active: dev
+2019-10-21 11:59:12.110  INFO DESKTOP-REML5DB --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-21 11:59:12.214  INFO DESKTOP-REML5DB --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 100ms. Found 18 repository interfaces.
+2019-10-21 11:59:12.454  INFO DESKTOP-REML5DB --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5d424fd5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-21 11:59:12.638  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2019-10-21 11:59:12.647  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+2019-10-21 11:59:12.654  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-10-21 11:59:12.654  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-21 11:59:12.808  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-10-21 11:59:12.808  INFO DESKTOP-REML5DB --- [           main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 1437 ms
+2019-10-21 11:59:13.012  INFO DESKTOP-REML5DB --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2019-10-21 11:59:14.672  INFO DESKTOP-REML5DB --- [           main] c.z.h.p.PoolBase                         : HikariPool-1 - Driver does not support get/set network timeout for connections. (This operation is not supported.)
+2019-10-21 11:59:14.979  INFO DESKTOP-REML5DB --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2019-10-21 11:59:15.035  INFO DESKTOP-REML5DB --- [           main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-10-21 11:59:15.089  INFO DESKTOP-REML5DB --- [           main] o.h.Version                              : HHH000412: Hibernate Core {5.3.11.Final}
+2019-10-21 11:59:15.090  INFO DESKTOP-REML5DB --- [           main] o.h.c.Environment                        : HHH000206: hibernate.properties not found
+2019-10-21 11:59:15.186  INFO DESKTOP-REML5DB --- [           main] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-10-21 11:59:15.314  INFO DESKTOP-REML5DB --- [           main] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2019-10-21 11:59:16.544  WARN DESKTOP-REML5DB --- [           main] o.h.b.i.InFlightMetadataCollectorImpl    : HHH000069: Duplicate generator name sequence-generator
+2019-10-21 11:59:17.086  INFO DESKTOP-REML5DB --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-21 11:59:17.654  INFO DESKTOP-REML5DB --- [           main] c.m.i.s.FileStorageService               : Inside FileStorageService Constructor
+2019-10-21 11:59:17.655  INFO DESKTOP-REML5DB --- [           main] c.m.i.s.FileStorageService               : About to create file storage location as mentioned in properties file
+2019-10-21 11:59:17.688  INFO DESKTOP-REML5DB --- [           main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-10-21 11:59:18.218  WARN DESKTOP-REML5DB --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-10-21 11:59:18.342  INFO DESKTOP-REML5DB --- [           main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-10-21 11:59:18.446  INFO DESKTOP-REML5DB --- [           main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-21 11:59:18.941  INFO DESKTOP-REML5DB --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-10-21 11:59:18.958  INFO DESKTOP-REML5DB --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-10-21 11:59:18.991  INFO DESKTOP-REML5DB --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-10-21 11:59:19.104  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_1
+2019-10-21 11:59:19.114  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_2
+2019-10-21 11:59:19.123  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_3
+2019-10-21 11:59:19.133  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_4
+2019-10-21 11:59:19.210  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: fetchMedicationsUsingGET_1
+2019-10-21 11:59:19.232  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+2019-10-21 11:59:19.248  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-21 11:59:19.323  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8085 (http)
+2019-10-21 11:59:19.323  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8085"]
+2019-10-21 11:59:19.324  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-10-21 11:59:19.324  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-21 11:59:19.341  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-10-21 11:59:19.341  INFO DESKTOP-REML5DB --- [           main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 89 ms
+2019-10-21 11:59:19.362  INFO DESKTOP-REML5DB --- [           main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-10-21 11:59:19.412  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8085"]
+2019-10-21 11:59:19.414  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8085 (http) with context path ''
+2019-10-21 11:59:19.416  INFO DESKTOP-REML5DB --- [           main] c.m.i.WorkshopApplication                : Started WorkshopApplication in 8.294 seconds (JVM running for 9.089)
+2019-10-21 11:59:34.953  INFO DESKTOP-REML5DB --- [nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-21 11:59:34.953  INFO DESKTOP-REML5DB --- [nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2019-10-21 11:59:34.960  INFO DESKTOP-REML5DB --- [nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 7 ms
+2019-10-21 12:03:25.231  INFO DESKTOP-REML5DB --- [           main] c.m.i.WorkshopApplication                : Starting WorkshopApplication on DESKTOP-REML5DB with PID 12020 (C:\Users\Miracle\Desktop\WorkShop\health-care\target\classes started by Miracle in C:\Users\Miracle\Desktop\WorkShop\health-care)
+2019-10-21 12:03:25.236  INFO DESKTOP-REML5DB --- [           main] c.m.i.WorkshopApplication                : The following profiles are active: dev
+2019-10-21 12:03:26.025  INFO DESKTOP-REML5DB --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-21 12:03:26.135  INFO DESKTOP-REML5DB --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 104ms. Found 18 repository interfaces.
+2019-10-21 12:03:26.383  INFO DESKTOP-REML5DB --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$73124a3b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-21 12:03:26.572  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2019-10-21 12:03:26.582  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+2019-10-21 12:03:26.588  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-10-21 12:03:26.589  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-21 12:03:26.749  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-10-21 12:03:26.749  INFO DESKTOP-REML5DB --- [           main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 1489 ms
+2019-10-21 12:03:26.959  INFO DESKTOP-REML5DB --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2019-10-21 12:03:28.628  INFO DESKTOP-REML5DB --- [           main] c.z.h.p.PoolBase                         : HikariPool-1 - Driver does not support get/set network timeout for connections. (This operation is not supported.)
+2019-10-21 12:03:28.933  INFO DESKTOP-REML5DB --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2019-10-21 12:03:28.986  INFO DESKTOP-REML5DB --- [           main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-10-21 12:03:29.033  INFO DESKTOP-REML5DB --- [           main] o.h.Version                              : HHH000412: Hibernate Core {5.3.11.Final}
+2019-10-21 12:03:29.034  INFO DESKTOP-REML5DB --- [           main] o.h.c.Environment                        : HHH000206: hibernate.properties not found
+2019-10-21 12:03:29.133  INFO DESKTOP-REML5DB --- [           main] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-10-21 12:03:29.255  INFO DESKTOP-REML5DB --- [           main] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2019-10-21 12:03:30.466  WARN DESKTOP-REML5DB --- [           main] o.h.b.i.InFlightMetadataCollectorImpl    : HHH000069: Duplicate generator name sequence-generator
+2019-10-21 12:03:30.957  INFO DESKTOP-REML5DB --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-21 12:03:31.525  INFO DESKTOP-REML5DB --- [           main] c.m.i.s.FileStorageService               : Inside FileStorageService Constructor
+2019-10-21 12:03:31.525  INFO DESKTOP-REML5DB --- [           main] c.m.i.s.FileStorageService               : About to create file storage location as mentioned in properties file
+2019-10-21 12:03:31.558  INFO DESKTOP-REML5DB --- [           main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-10-21 12:03:32.027  WARN DESKTOP-REML5DB --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-10-21 12:03:32.139  INFO DESKTOP-REML5DB --- [           main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-10-21 12:03:32.239  INFO DESKTOP-REML5DB --- [           main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-21 12:03:32.611  INFO DESKTOP-REML5DB --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-10-21 12:03:32.625  INFO DESKTOP-REML5DB --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-10-21 12:03:32.652  INFO DESKTOP-REML5DB --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-10-21 12:03:32.750  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_1
+2019-10-21 12:03:32.759  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_2
+2019-10-21 12:03:32.765  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_3
+2019-10-21 12:03:32.773  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_4
+2019-10-21 12:03:32.839  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: fetchMedicationsUsingGET_1
+2019-10-21 12:03:32.860  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+2019-10-21 12:03:32.875  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-21 12:03:32.948  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8085 (http)
+2019-10-21 12:03:32.949  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8085"]
+2019-10-21 12:03:32.949  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-10-21 12:03:32.949  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-21 12:03:32.970  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-10-21 12:03:32.970  INFO DESKTOP-REML5DB --- [           main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 92 ms
+2019-10-21 12:03:32.992  INFO DESKTOP-REML5DB --- [           main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-10-21 12:03:33.047  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8085"]
+2019-10-21 12:03:33.050  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8085 (http) with context path ''
+2019-10-21 12:03:33.053  INFO DESKTOP-REML5DB --- [           main] c.m.i.WorkshopApplication                : Started WorkshopApplication in 8.044 seconds (JVM running for 8.883)
+2019-10-21 12:03:58.956  INFO DESKTOP-REML5DB --- [nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-21 12:03:58.956  INFO DESKTOP-REML5DB --- [nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2019-10-21 12:03:58.965  INFO DESKTOP-REML5DB --- [nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 9 ms
+2019-10-21 12:05:11.426  INFO DESKTOP-REML5DB --- [           main] c.m.i.WorkshopApplication                : Starting WorkshopApplication on DESKTOP-REML5DB with PID 6488 (C:\Users\Miracle\Desktop\WorkShop\health-care\target\classes started by Miracle in C:\Users\Miracle\Desktop\WorkShop\health-care)
+2019-10-21 12:05:11.430  INFO DESKTOP-REML5DB --- [           main] c.m.i.WorkshopApplication                : The following profiles are active: dev
+2019-10-21 12:05:12.215  INFO DESKTOP-REML5DB --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-21 12:05:12.318  INFO DESKTOP-REML5DB --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 99ms. Found 18 repository interfaces.
+2019-10-21 12:05:12.582  INFO DESKTOP-REML5DB --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8ab5a475] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-21 12:05:12.780  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2019-10-21 12:05:12.792  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+2019-10-21 12:05:12.798  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-10-21 12:05:12.798  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-21 12:05:12.963  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-10-21 12:05:12.964  INFO DESKTOP-REML5DB --- [           main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 1507 ms
+2019-10-21 12:05:13.183  INFO DESKTOP-REML5DB --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2019-10-21 12:05:14.895  INFO DESKTOP-REML5DB --- [           main] c.z.h.p.PoolBase                         : HikariPool-1 - Driver does not support get/set network timeout for connections. (This operation is not supported.)
+2019-10-21 12:05:15.349  INFO DESKTOP-REML5DB --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2019-10-21 12:05:15.404  INFO DESKTOP-REML5DB --- [           main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-10-21 12:05:15.454  INFO DESKTOP-REML5DB --- [           main] o.h.Version                              : HHH000412: Hibernate Core {5.3.11.Final}
+2019-10-21 12:05:15.455  INFO DESKTOP-REML5DB --- [           main] o.h.c.Environment                        : HHH000206: hibernate.properties not found
+2019-10-21 12:05:15.559  INFO DESKTOP-REML5DB --- [           main] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-10-21 12:05:15.690  INFO DESKTOP-REML5DB --- [           main] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2019-10-21 12:05:16.937  WARN DESKTOP-REML5DB --- [           main] o.h.b.i.InFlightMetadataCollectorImpl    : HHH000069: Duplicate generator name sequence-generator
+2019-10-21 12:05:17.491  INFO DESKTOP-REML5DB --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-21 12:05:18.108  INFO DESKTOP-REML5DB --- [           main] c.m.i.s.FileStorageService               : Inside FileStorageService Constructor
+2019-10-21 12:05:18.109  INFO DESKTOP-REML5DB --- [           main] c.m.i.s.FileStorageService               : About to create file storage location as mentioned in properties file
+2019-10-21 12:05:18.144  INFO DESKTOP-REML5DB --- [           main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-10-21 12:05:18.643  WARN DESKTOP-REML5DB --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-10-21 12:05:18.765  INFO DESKTOP-REML5DB --- [           main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-10-21 12:05:18.894  INFO DESKTOP-REML5DB --- [           main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-21 12:05:19.331  INFO DESKTOP-REML5DB --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-10-21 12:05:19.347  INFO DESKTOP-REML5DB --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-10-21 12:05:19.377  INFO DESKTOP-REML5DB --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-10-21 12:05:19.486  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_1
+2019-10-21 12:05:19.498  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_2
+2019-10-21 12:05:19.505  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_3
+2019-10-21 12:05:19.513  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_4
+2019-10-21 12:05:19.582  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: fetchMedicationsUsingGET_1
+2019-10-21 12:05:19.605  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+2019-10-21 12:05:19.624  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-21 12:05:19.703  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8085 (http)
+2019-10-21 12:05:19.703  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8085"]
+2019-10-21 12:05:19.704  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-10-21 12:05:19.704  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-21 12:05:19.721  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-10-21 12:05:19.722  INFO DESKTOP-REML5DB --- [           main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 95 ms
+2019-10-21 12:05:19.743  INFO DESKTOP-REML5DB --- [           main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-10-21 12:05:19.796  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8085"]
+2019-10-21 12:05:19.798  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8085 (http) with context path ''
+2019-10-21 12:05:19.801  INFO DESKTOP-REML5DB --- [           main] c.m.i.WorkshopApplication                : Started WorkshopApplication in 8.592 seconds (JVM running for 9.41)
+2019-10-21 12:05:24.110  INFO DESKTOP-REML5DB --- [nio-8080-exec-2] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-21 12:05:24.110  INFO DESKTOP-REML5DB --- [nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2019-10-21 12:05:24.117  INFO DESKTOP-REML5DB --- [nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Completed initialization in 7 ms
+2019-10-21 12:06:14.872  INFO DESKTOP-REML5DB --- [           main] c.m.i.WorkshopApplication                : Starting WorkshopApplication on DESKTOP-REML5DB with PID 7044 (C:\Users\Miracle\Desktop\WorkShop\health-care\target\classes started by Miracle in C:\Users\Miracle\Desktop\WorkShop\health-care)
+2019-10-21 12:06:14.877  INFO DESKTOP-REML5DB --- [           main] c.m.i.WorkshopApplication                : The following profiles are active: dev
+2019-10-21 12:06:15.645  INFO DESKTOP-REML5DB --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-21 12:06:15.750  INFO DESKTOP-REML5DB --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 100ms. Found 18 repository interfaces.
+2019-10-21 12:06:15.991  INFO DESKTOP-REML5DB --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$cc035c25] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-21 12:06:16.174  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2019-10-21 12:06:16.184  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+2019-10-21 12:06:16.189  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-10-21 12:06:16.190  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-21 12:06:16.343  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-10-21 12:06:16.343  INFO DESKTOP-REML5DB --- [           main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 1440 ms
+2019-10-21 12:06:16.545  INFO DESKTOP-REML5DB --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2019-10-21 12:06:18.158  INFO DESKTOP-REML5DB --- [           main] c.z.h.p.PoolBase                         : HikariPool-1 - Driver does not support get/set network timeout for connections. (This operation is not supported.)
+2019-10-21 12:06:18.457  INFO DESKTOP-REML5DB --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2019-10-21 12:06:18.508  INFO DESKTOP-REML5DB --- [           main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-10-21 12:06:18.554  INFO DESKTOP-REML5DB --- [           main] o.h.Version                              : HHH000412: Hibernate Core {5.3.11.Final}
+2019-10-21 12:06:18.555  INFO DESKTOP-REML5DB --- [           main] o.h.c.Environment                        : HHH000206: hibernate.properties not found
+2019-10-21 12:06:18.651  INFO DESKTOP-REML5DB --- [           main] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-10-21 12:06:18.773  INFO DESKTOP-REML5DB --- [           main] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2019-10-21 12:06:20.003  WARN DESKTOP-REML5DB --- [           main] o.h.b.i.InFlightMetadataCollectorImpl    : HHH000069: Duplicate generator name sequence-generator
+2019-10-21 12:06:20.471  INFO DESKTOP-REML5DB --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-21 12:06:21.025  INFO DESKTOP-REML5DB --- [           main] c.m.i.s.FileStorageService               : Inside FileStorageService Constructor
+2019-10-21 12:06:21.025  INFO DESKTOP-REML5DB --- [           main] c.m.i.s.FileStorageService               : About to create file storage location as mentioned in properties file
+2019-10-21 12:06:21.057  INFO DESKTOP-REML5DB --- [           main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-10-21 12:06:21.512  WARN DESKTOP-REML5DB --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-10-21 12:06:21.623  INFO DESKTOP-REML5DB --- [           main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-10-21 12:06:21.725  INFO DESKTOP-REML5DB --- [           main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-21 12:06:22.103  INFO DESKTOP-REML5DB --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-10-21 12:06:22.117  INFO DESKTOP-REML5DB --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-10-21 12:06:22.143  INFO DESKTOP-REML5DB --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-10-21 12:06:22.237  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_1
+2019-10-21 12:06:22.246  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_2
+2019-10-21 12:06:22.253  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_3
+2019-10-21 12:06:22.261  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_4
+2019-10-21 12:06:22.326  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: fetchMedicationsUsingGET_1
+2019-10-21 12:06:22.347  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+2019-10-21 12:06:22.361  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-21 12:06:22.432  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8085 (http)
+2019-10-21 12:06:22.433  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8085"]
+2019-10-21 12:06:22.433  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-10-21 12:06:22.433  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-21 12:06:22.451  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-10-21 12:06:22.451  INFO DESKTOP-REML5DB --- [           main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 87 ms
+2019-10-21 12:06:22.470  INFO DESKTOP-REML5DB --- [           main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-10-21 12:06:22.522  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8085"]
+2019-10-21 12:06:22.524  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8085 (http) with context path ''
+2019-10-21 12:06:22.525  INFO DESKTOP-REML5DB --- [           main] c.m.i.WorkshopApplication                : Started WorkshopApplication in 7.873 seconds (JVM running for 8.692)
+2019-10-21 12:06:30.247  INFO DESKTOP-REML5DB --- [nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-21 12:06:30.247  INFO DESKTOP-REML5DB --- [nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2019-10-21 12:06:30.255  INFO DESKTOP-REML5DB --- [nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 8 ms
+2019-10-21 12:07:23.789  INFO DESKTOP-REML5DB --- [           main] c.m.i.WorkshopApplication                : Starting WorkshopApplication on DESKTOP-REML5DB with PID 20808 (C:\Users\Miracle\Desktop\WorkShop\health-care\target\classes started by Miracle in C:\Users\Miracle\Desktop\WorkShop\health-care)
+2019-10-21 12:07:23.794  INFO DESKTOP-REML5DB --- [           main] c.m.i.WorkshopApplication                : The following profiles are active: dev
+2019-10-21 12:07:24.572  INFO DESKTOP-REML5DB --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-21 12:07:24.678  INFO DESKTOP-REML5DB --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 101ms. Found 18 repository interfaces.
+2019-10-21 12:07:24.929  INFO DESKTOP-REML5DB --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1bb23352] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-21 12:07:25.111  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2019-10-21 12:07:25.121  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+2019-10-21 12:07:25.127  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-10-21 12:07:25.127  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-21 12:07:25.280  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-10-21 12:07:25.280  INFO DESKTOP-REML5DB --- [           main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 1461 ms
+2019-10-21 12:07:25.482  INFO DESKTOP-REML5DB --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2019-10-21 12:07:27.130  INFO DESKTOP-REML5DB --- [           main] c.z.h.p.PoolBase                         : HikariPool-1 - Driver does not support get/set network timeout for connections. (This operation is not supported.)
+2019-10-21 12:07:27.442  INFO DESKTOP-REML5DB --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2019-10-21 12:07:27.497  INFO DESKTOP-REML5DB --- [           main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-10-21 12:07:27.545  INFO DESKTOP-REML5DB --- [           main] o.h.Version                              : HHH000412: Hibernate Core {5.3.11.Final}
+2019-10-21 12:07:27.547  INFO DESKTOP-REML5DB --- [           main] o.h.c.Environment                        : HHH000206: hibernate.properties not found
+2019-10-21 12:07:27.647  INFO DESKTOP-REML5DB --- [           main] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-10-21 12:07:27.770  INFO DESKTOP-REML5DB --- [           main] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2019-10-21 12:07:29.016  WARN DESKTOP-REML5DB --- [           main] o.h.b.i.InFlightMetadataCollectorImpl    : HHH000069: Duplicate generator name sequence-generator
+2019-10-21 12:07:29.504  INFO DESKTOP-REML5DB --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-21 12:07:30.081  INFO DESKTOP-REML5DB --- [           main] c.m.i.s.FileStorageService               : Inside FileStorageService Constructor
+2019-10-21 12:07:30.081  INFO DESKTOP-REML5DB --- [           main] c.m.i.s.FileStorageService               : About to create file storage location as mentioned in properties file
+2019-10-21 12:07:30.113  INFO DESKTOP-REML5DB --- [           main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-10-21 12:07:30.591  WARN DESKTOP-REML5DB --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-10-21 12:07:30.702  INFO DESKTOP-REML5DB --- [           main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-10-21 12:07:30.801  INFO DESKTOP-REML5DB --- [           main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-21 12:07:31.169  INFO DESKTOP-REML5DB --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-10-21 12:07:31.183  INFO DESKTOP-REML5DB --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-10-21 12:07:31.211  INFO DESKTOP-REML5DB --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-10-21 12:07:31.307  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_1
+2019-10-21 12:07:31.316  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_2
+2019-10-21 12:07:31.322  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_3
+2019-10-21 12:07:31.330  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_4
+2019-10-21 12:07:31.395  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: fetchMedicationsUsingGET_1
+2019-10-21 12:07:31.416  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+2019-10-21 12:07:31.430  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-21 12:07:31.505  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8085 (http)
+2019-10-21 12:07:31.506  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8085"]
+2019-10-21 12:07:31.506  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-10-21 12:07:31.506  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-21 12:07:31.523  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-10-21 12:07:31.523  INFO DESKTOP-REML5DB --- [           main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 90 ms
+2019-10-21 12:07:31.545  INFO DESKTOP-REML5DB --- [           main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-10-21 12:07:31.593  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8085"]
+2019-10-21 12:07:31.595  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8085 (http) with context path ''
+2019-10-21 12:07:31.597  INFO DESKTOP-REML5DB --- [           main] c.m.i.WorkshopApplication                : Started WorkshopApplication in 8.028 seconds (JVM running for 8.866)
+2019-10-21 12:07:34.007  INFO DESKTOP-REML5DB --- [nio-8080-exec-2] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-21 12:07:34.007  INFO DESKTOP-REML5DB --- [nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2019-10-21 12:07:34.013  INFO DESKTOP-REML5DB --- [nio-8080-exec-2] o.s.w.s.DispatcherServlet                : Completed initialization in 6 ms
+2019-10-21 12:20:23.336 ERROR DESKTOP-REML5DB --- [nio-8080-exec-6] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.web.client.HttpClientErrorException$NotFound: 404 null] with root cause
+org.springframework.web.client.HttpClientErrorException$NotFound: 404 null
+	at org.springframework.web.client.HttpClientErrorException.create(HttpClientErrorException.java:85)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:122)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:102)
+	at org.springframework.web.client.ResponseErrorHandler.handleError(ResponseErrorHandler.java:63)
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:778)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:736)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:670)
+	at org.springframework.web.client.RestTemplate.getForObject(RestTemplate.java:311)
+	at com.miraclesoft.io.services.CommonService.getCurrentUserID(CommonService.java:16)
+	at com.miraclesoft.io.controller.FCHealthBPController.getLoggedInUser(FCHealthBPController.java:40)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.web.trace.servlet.HttpTraceFilter.doFilterInternal(HttpTraceFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.filterAndRecordMetrics(WebMvcMetricsFilter.java:114)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:104)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Unknown Source)
+2019-10-21 13:03:45.994  INFO DESKTOP-REML5DB --- [           main] c.m.i.WorkshopApplication                : Starting WorkshopApplication on DESKTOP-REML5DB with PID 18096 (C:\Users\Miracle\Desktop\WorkShop\health-care\target\classes started by Miracle in C:\Users\Miracle\Desktop\WorkShop\health-care)
+2019-10-21 13:03:45.999  INFO DESKTOP-REML5DB --- [           main] c.m.i.WorkshopApplication                : The following profiles are active: dev
+2019-10-21 13:03:46.780  INFO DESKTOP-REML5DB --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-21 13:03:46.887  INFO DESKTOP-REML5DB --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 101ms. Found 18 repository interfaces.
+2019-10-21 13:03:47.132  INFO DESKTOP-REML5DB --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$482b8138] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-21 13:03:47.311  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2019-10-21 13:03:47.321  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+2019-10-21 13:03:47.327  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-10-21 13:03:47.327  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-21 13:03:47.480  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-10-21 13:03:47.481  INFO DESKTOP-REML5DB --- [           main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 1456 ms
+2019-10-21 13:03:47.681  INFO DESKTOP-REML5DB --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2019-10-21 13:03:49.678  INFO DESKTOP-REML5DB --- [           main] c.z.h.p.PoolBase                         : HikariPool-1 - Driver does not support get/set network timeout for connections. (This operation is not supported.)
+2019-10-21 13:03:50.080  INFO DESKTOP-REML5DB --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2019-10-21 13:03:50.129  INFO DESKTOP-REML5DB --- [           main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-10-21 13:03:50.173  INFO DESKTOP-REML5DB --- [           main] o.h.Version                              : HHH000412: Hibernate Core {5.3.11.Final}
+2019-10-21 13:03:50.174  INFO DESKTOP-REML5DB --- [           main] o.h.c.Environment                        : HHH000206: hibernate.properties not found
+2019-10-21 13:03:50.270  INFO DESKTOP-REML5DB --- [           main] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-10-21 13:03:50.392  INFO DESKTOP-REML5DB --- [           main] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2019-10-21 13:03:51.957  WARN DESKTOP-REML5DB --- [           main] o.h.b.i.InFlightMetadataCollectorImpl    : HHH000069: Duplicate generator name sequence-generator
+2019-10-21 13:03:52.439  INFO DESKTOP-REML5DB --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-21 13:03:53.085  INFO DESKTOP-REML5DB --- [           main] c.m.i.s.FileStorageService               : Inside FileStorageService Constructor
+2019-10-21 13:03:53.085  INFO DESKTOP-REML5DB --- [           main] c.m.i.s.FileStorageService               : About to create file storage location as mentioned in properties file
+2019-10-21 13:03:53.117  INFO DESKTOP-REML5DB --- [           main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-10-21 13:03:53.621  WARN DESKTOP-REML5DB --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-10-21 13:03:53.731  INFO DESKTOP-REML5DB --- [           main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-10-21 13:03:53.831  INFO DESKTOP-REML5DB --- [           main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-21 13:03:54.193  INFO DESKTOP-REML5DB --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-10-21 13:03:54.207  INFO DESKTOP-REML5DB --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-10-21 13:03:54.233  INFO DESKTOP-REML5DB --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-10-21 13:03:54.329  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_1
+2019-10-21 13:03:54.337  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_2
+2019-10-21 13:03:54.343  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_3
+2019-10-21 13:03:54.351  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_4
+2019-10-21 13:03:54.416  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: fetchMedicationsUsingGET_1
+2019-10-21 13:03:54.436  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+2019-10-21 13:03:54.451  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-21 13:03:54.525  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8085 (http)
+2019-10-21 13:03:54.525  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8085"]
+2019-10-21 13:03:54.525  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-10-21 13:03:54.526  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-21 13:03:54.542  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-10-21 13:03:54.542  INFO DESKTOP-REML5DB --- [           main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 89 ms
+2019-10-21 13:03:54.560  INFO DESKTOP-REML5DB --- [           main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-10-21 13:03:54.611  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8085"]
+2019-10-21 13:03:54.613  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8085 (http) with context path ''
+2019-10-21 13:03:54.615  INFO DESKTOP-REML5DB --- [           main] c.m.i.WorkshopApplication                : Started WorkshopApplication in 8.846 seconds (JVM running for 9.686)
+2019-10-21 13:04:42.528  INFO DESKTOP-REML5DB --- [           main] c.m.i.WorkshopApplication                : Starting WorkshopApplication on DESKTOP-REML5DB with PID 21000 (C:\Users\Miracle\Desktop\WorkShop\health-care\target\classes started by Miracle in C:\Users\Miracle\Desktop\WorkShop\health-care)
+2019-10-21 13:04:42.532  INFO DESKTOP-REML5DB --- [           main] c.m.i.WorkshopApplication                : The following profiles are active: dev
+2019-10-21 13:04:43.280  INFO DESKTOP-REML5DB --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-21 13:04:43.382  INFO DESKTOP-REML5DB --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97ms. Found 18 repository interfaces.
+2019-10-21 13:04:43.625  INFO DESKTOP-REML5DB --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$62c093d8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-21 13:04:43.799  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2019-10-21 13:04:43.809  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+2019-10-21 13:04:43.815  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-10-21 13:04:43.815  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-21 13:04:43.964  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-10-21 13:04:43.964  INFO DESKTOP-REML5DB --- [           main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 1406 ms
+2019-10-21 13:04:44.161  INFO DESKTOP-REML5DB --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2019-10-21 13:04:46.283  INFO DESKTOP-REML5DB --- [           main] c.z.h.p.PoolBase                         : HikariPool-1 - Driver does not support get/set network timeout for connections. (This operation is not supported.)
+2019-10-21 13:04:46.660  INFO DESKTOP-REML5DB --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2019-10-21 13:04:46.705  INFO DESKTOP-REML5DB --- [           main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-10-21 13:04:46.749  INFO DESKTOP-REML5DB --- [           main] o.h.Version                              : HHH000412: Hibernate Core {5.3.11.Final}
+2019-10-21 13:04:46.750  INFO DESKTOP-REML5DB --- [           main] o.h.c.Environment                        : HHH000206: hibernate.properties not found
+2019-10-21 13:04:46.844  INFO DESKTOP-REML5DB --- [           main] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-10-21 13:04:46.962  INFO DESKTOP-REML5DB --- [           main] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2019-10-21 13:04:48.623  WARN DESKTOP-REML5DB --- [           main] o.h.b.i.InFlightMetadataCollectorImpl    : HHH000069: Duplicate generator name sequence-generator
+2019-10-21 13:04:49.110  INFO DESKTOP-REML5DB --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-21 13:04:49.767  INFO DESKTOP-REML5DB --- [           main] c.m.i.s.FileStorageService               : Inside FileStorageService Constructor
+2019-10-21 13:04:49.767  INFO DESKTOP-REML5DB --- [           main] c.m.i.s.FileStorageService               : About to create file storage location as mentioned in properties file
+2019-10-21 13:04:49.799  INFO DESKTOP-REML5DB --- [           main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-10-21 13:04:50.250  WARN DESKTOP-REML5DB --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-10-21 13:04:50.357  INFO DESKTOP-REML5DB --- [           main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-10-21 13:04:50.481  INFO DESKTOP-REML5DB --- [           main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-21 13:04:50.860  INFO DESKTOP-REML5DB --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-10-21 13:04:50.873  INFO DESKTOP-REML5DB --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-10-21 13:04:50.899  INFO DESKTOP-REML5DB --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-10-21 13:04:50.998  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_1
+2019-10-21 13:04:51.007  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_2
+2019-10-21 13:04:51.012  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_3
+2019-10-21 13:04:51.019  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_4
+2019-10-21 13:04:51.080  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: fetchMedicationsUsingGET_1
+2019-10-21 13:04:51.100  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+2019-10-21 13:04:51.114  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-21 13:04:51.183  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8085 (http)
+2019-10-21 13:04:51.183  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8085"]
+2019-10-21 13:04:51.183  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-10-21 13:04:51.183  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-21 13:04:51.199  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-10-21 13:04:51.199  INFO DESKTOP-REML5DB --- [           main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 82 ms
+2019-10-21 13:04:51.216  INFO DESKTOP-REML5DB --- [           main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-10-21 13:04:51.264  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8085"]
+2019-10-21 13:04:51.266  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8085 (http) with context path ''
+2019-10-21 13:04:51.268  INFO DESKTOP-REML5DB --- [           main] c.m.i.WorkshopApplication                : Started WorkshopApplication in 8.956 seconds (JVM running for 9.748)
+2019-10-21 13:04:58.310  INFO DESKTOP-REML5DB --- [nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-21 13:04:58.310  INFO DESKTOP-REML5DB --- [nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2019-10-21 13:04:58.317  INFO DESKTOP-REML5DB --- [nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 6 ms
+2019-10-21 13:05:29.206  INFO DESKTOP-REML5DB --- [           main] c.m.i.WorkshopApplication                : Starting WorkshopApplication on DESKTOP-REML5DB with PID 8328 (C:\Users\Miracle\Desktop\WorkShop\health-care\target\classes started by Miracle in C:\Users\Miracle\Desktop\WorkShop\health-care)
+2019-10-21 13:05:29.211  INFO DESKTOP-REML5DB --- [           main] c.m.i.WorkshopApplication                : The following profiles are active: dev
+2019-10-21 13:05:29.986  INFO DESKTOP-REML5DB --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-21 13:05:30.088  INFO DESKTOP-REML5DB --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 98ms. Found 18 repository interfaces.
+2019-10-21 13:05:30.327  INFO DESKTOP-REML5DB --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$39258820] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-21 13:05:30.503  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2019-10-21 13:05:30.513  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+2019-10-21 13:05:30.518  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-10-21 13:05:30.519  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-21 13:05:30.668  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-10-21 13:05:30.669  INFO DESKTOP-REML5DB --- [           main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 1434 ms
+2019-10-21 13:05:30.861  INFO DESKTOP-REML5DB --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2019-10-21 13:05:32.882  INFO DESKTOP-REML5DB --- [           main] c.z.h.p.PoolBase                         : HikariPool-1 - Driver does not support get/set network timeout for connections. (This operation is not supported.)
+2019-10-21 13:05:33.407  INFO DESKTOP-REML5DB --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2019-10-21 13:05:33.453  INFO DESKTOP-REML5DB --- [           main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-10-21 13:05:33.500  INFO DESKTOP-REML5DB --- [           main] o.h.Version                              : HHH000412: Hibernate Core {5.3.11.Final}
+2019-10-21 13:05:33.501  INFO DESKTOP-REML5DB --- [           main] o.h.c.Environment                        : HHH000206: hibernate.properties not found
+2019-10-21 13:05:33.596  INFO DESKTOP-REML5DB --- [           main] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-10-21 13:05:33.716  INFO DESKTOP-REML5DB --- [           main] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2019-10-21 13:05:35.284  WARN DESKTOP-REML5DB --- [           main] o.h.b.i.InFlightMetadataCollectorImpl    : HHH000069: Duplicate generator name sequence-generator
+2019-10-21 13:05:35.755  INFO DESKTOP-REML5DB --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-21 13:05:36.375  INFO DESKTOP-REML5DB --- [           main] c.m.i.s.FileStorageService               : Inside FileStorageService Constructor
+2019-10-21 13:05:36.375  INFO DESKTOP-REML5DB --- [           main] c.m.i.s.FileStorageService               : About to create file storage location as mentioned in properties file
+2019-10-21 13:05:36.406  INFO DESKTOP-REML5DB --- [           main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-10-21 13:05:36.857  WARN DESKTOP-REML5DB --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-10-21 13:05:36.964  INFO DESKTOP-REML5DB --- [           main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-10-21 13:05:37.060  INFO DESKTOP-REML5DB --- [           main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-21 13:05:37.428  INFO DESKTOP-REML5DB --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-10-21 13:05:37.441  INFO DESKTOP-REML5DB --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-10-21 13:05:37.467  INFO DESKTOP-REML5DB --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-10-21 13:05:37.565  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_1
+2019-10-21 13:05:37.573  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_2
+2019-10-21 13:05:37.578  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_3
+2019-10-21 13:05:37.586  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_4
+2019-10-21 13:05:37.647  INFO DESKTOP-REML5DB --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: fetchMedicationsUsingGET_1
+2019-10-21 13:05:37.667  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+2019-10-21 13:05:37.683  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-21 13:05:37.754  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8085 (http)
+2019-10-21 13:05:37.754  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8085"]
+2019-10-21 13:05:37.755  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-10-21 13:05:37.755  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-21 13:05:37.771  INFO DESKTOP-REML5DB --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-10-21 13:05:37.771  INFO DESKTOP-REML5DB --- [           main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 85 ms
+2019-10-21 13:05:37.789  INFO DESKTOP-REML5DB --- [           main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-10-21 13:05:37.838  INFO DESKTOP-REML5DB --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8085"]
+2019-10-21 13:05:37.841  INFO DESKTOP-REML5DB --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8085 (http) with context path ''
+2019-10-21 13:05:37.843  INFO DESKTOP-REML5DB --- [           main] c.m.i.WorkshopApplication                : Started WorkshopApplication in 8.868 seconds (JVM running for 9.811)
+2019-10-21 13:06:45.065  INFO DESKTOP-REML5DB --- [nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-21 13:06:45.065  INFO DESKTOP-REML5DB --- [nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2019-10-21 13:06:45.071  INFO DESKTOP-REML5DB --- [nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 6 ms

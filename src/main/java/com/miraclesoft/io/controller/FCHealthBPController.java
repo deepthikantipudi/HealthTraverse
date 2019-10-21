@@ -50,7 +50,7 @@ public class FCHealthBPController {
 		   fchBP.setBpDate(new Date());
 		   fchBP.setPid(2);
 //		   fchBP.setId(2);
-		  // System.out.println(new Date());
+//		   System.out.println(new Date());
 		   return bpRepository.save(fchBP);
 	   }
 
