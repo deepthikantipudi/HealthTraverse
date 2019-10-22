@@ -218,9 +218,10 @@ public class CustomFCHRepositoryImpl implements CustomFCHRepository {
 	}
 
 	@Override
-	public List<Object[]> fetchMedications(String fetchall) throws Exception {
-		// TODO Auto-generated method stub
+	public List<Object[]> fetchMedications(String fetchall, long pid) throws Exception {
+		// TODO Auto-generated method stub\\\\\
 		Query query = entityManager.createNativeQuery(fetchall);
+		query.setParameter(1, pid );
 		List<Object[]> jh = query.getResultList();
 		return jh;
 	}

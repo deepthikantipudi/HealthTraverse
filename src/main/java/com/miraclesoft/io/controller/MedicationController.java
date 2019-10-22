@@ -46,6 +46,8 @@ public class MedicationController {
 	
 	@Autowired
 	PatientPrescriptionDetailsRepo patientPrescriptionDetailsRepo;
+	
+	//Medication_Details medi-new Medication_Details();
 //	   ObjectMapper Obj = new ObjectMapper(); 
 	
 	
@@ -77,48 +79,51 @@ public class MedicationController {
 	 //////////////////
 	 
 	 
-	 @GetMapping(value="/getmedpres",produces=MediaType.APPLICATION_JSON_VALUE)
-	    public List<Object[]> fetchMedications(@Value("${fetchAllPres}") String query) throws Exception {
+	 @GetMapping(value="/getmedpres/{pid}",produces=MediaType.APPLICATION_JSON_VALUE)
+	    public List<MedPrescriptionDTO> fetchMedications(@Value("${fetchAllPres}") String query, @PathVariable long pid) throws Exception {
 		 System.out.println("fetching records from database....");
-		 return medrepo.fetchMedications(query);
+		 return medrepo.fetchMedications(query,pid);
 		 
 		// return abc.get(0).getDosage();
 	         
 	         
 	    }
 	 
+	 @GetMapping("/getmeds")
+	 public Iterable getmeds() {
+		 return medrepo.findAll();
+	 }
 	 
 	 
+	 @RequestMapping(value="/editmed/{id}",method=RequestMethod.PUT,consumes = {"multipart/form-data"})
+	 public Medication_Details updateMed(@PathVariable int id,@RequestParam("DESCRIPTION") String desc,@RequestParam("MEDNAME") String title,@RequestParam("MEDIMAGE") MultipartFile im) throws IOException {
+	    	
+		 System.out.println("updating record in database....");
+		 Medication_Details med=new Medication_Details();
+		 med.setMEDID(id);
+		med.setDESCRIPTION(desc);
+		 med.setMEDNAME(title);
+		// med.setDosage(dosage);
+		 med.setMedImage(im.getBytes());
+		 return medrepo.save(med);
+	    }
 	 
-//	 @PutMapping("/{id}")
-//	 public Medication_Details updateMed(@RequestBody Medication_Details med, @PathVariable Long id) {
-//	    	
-//		 System.out.println("updating record in database...."+id);
-//		 /*
-//		 Medication_Details med1=medrepo.findById(id).get();
-//		 
-//		String desc=med.getDESCRIPTION();
-//	        med1.setDESCRIPTION(desc);
-//	         
-//	        return medrepo.save(med1);
-//	        */
-//		 med.setMEDID(id);
-//
-//		 
-//		 if(med.getMEDID()!=id) {                                         //checking the employee id 
-//			 throw new RecordIdMismatchException();
-//		}
-//		medrepo.findById(id).orElseThrow(RecordNotFoundException::new);
-//		//emp.setId(eid);
-//		return medrepo.save(med);
-//	    }
-//	 
-	 @DeleteMapping("/{id}")
-	    public void delete(@PathVariable int id) {
-	        medrepo.findById(id);
+	 @DeleteMapping("/deletemed/{medid}")
+	    public void deletemed(@PathVariable int medid) {
+		 medrepo.findById(medid);
 	          			 System.out.println("deleting from database....");
 
-	        medrepo.deleteById(id);
+	          			medrepo.deleteById(medid);
+	    }
+
+	 
+	 
+	 @DeleteMapping("/{ppdid}")
+	    public void delete(@PathVariable int ppdid) {
+	        patientPrescriptionDetailsRepo.findById(ppdid);
+	          			 System.out.println("deleting from database....");
+
+	       patientPrescriptionDetailsRepo.deleteById(ppdid);
 	    }
 
 	 
@@ -131,6 +136,18 @@ public class MedicationController {
 	        return patientPrescriptionRepo.save(pp);
 	    }
 	 
+	 @GetMapping("/getPP")
+	 public List<PatientPrescription> getPP() {
+		 return patientPrescriptionRepo.findAll();
+	 }
+	 
+	 @DeleteMapping("PP/{presid}")
+	    public void deletePP(@PathVariable int presid) {
+	        patientPrescriptionRepo.findById(presid);
+	          			 System.out.println("deleting from database....");
+
+	       patientPrescriptionRepo.deleteById(presid);
+	    }
 	 
 	 //////////////Patient Prescription Details///////////////////////////////////////////////////
 	 
@@ -141,11 +158,12 @@ public class MedicationController {
 	        return patientPrescriptionDetailsRepo.save(ppd);
 	    }
 	 
-//	 @GetMapping("/getPPDS")
-//	    public Iterable findAll() {
-//		 System.out.println("fetching records from database....");
-//	        return patientPrescriptionDetailsRepo.findAll();
-//	    }
+	 
+	 @GetMapping("/getPPDS")
+	    public Iterable findAll() {
+		 System.out.println("fetching records from database....");
+	        return patientPrescriptionDetailsRepo.findAll();
+	    }
 //	 
 	 
 	 //////////////////////////////////////////////////////////////////////////////////////
