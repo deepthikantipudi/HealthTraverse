@@ -27,16 +27,16 @@ public class LoginController {
 		
 		if(usr!=null && pswd!=null) {
 			
-			Users user=userRepo.authentiacateUsers(usr, pswd);
-			if(user!=null) {
+			Users u=userRepo.authentiacateUsers(usr, pswd);
+			if(u!=null) {
 //			return user.getRoles();
 			
-			   map.put("Role", user.getRoles());
+			   map.put("Role", u.getRoles());
 			    return new ResponseEntity<>(map, HttpStatus.OK);
 			
 			}
 			else {
-				  map.put("Error Response", "Invalid Creds");
+				  map.put("Error Response", "Invalid Credentials");
 				  return new ResponseEntity<>(map, HttpStatus.NOT_FOUND);
 
 			}

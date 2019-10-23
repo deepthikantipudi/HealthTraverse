@@ -55,18 +55,21 @@ public class FCHealthBPController {
 	   }
 
 	   @GetMapping(value="/CurrentBP/{patientId}",produces=MediaType.APPLICATION_JSON_VALUE)
-	   public ResponseEntity<?>  recentBpOfPatient(@PathVariable("patientId") long patientId, @Value("${highBpQuery}") String query1, @Value("${lowBpQuery}") String query2) {
-		   long highBp = bpRepository.findRecentValueByPid(patientId, query1);
-		   long lowBp = bpRepository.findRecentValueByPid(patientId, query2);
-		   
-		   if(highBp != 0 && lowBp != 0  ) {
-			   fchealthBp.setHighBP(highBp);
-			   fchealthBp.setLowBP(lowBp);
-			   System.out.println(fchealthBp);
-			return new ResponseEntity<>(fchealthBp, HttpStatus.OK);
+	   public ResponseEntity<?>  recentBpOfPatient(@PathVariable("patientId") long patientId, @Value("${bpQuery}") String query1) {
+		   List<Object[]> bp = bpRepository.findRecentValueByPid(patientId, query1);
+//		   List<Object[]> lowBp = bpRepository.findRecentValueByPid(patientId, query2);
+		   HashMap<String, Object> map = new HashMap<>(); 
+		   if(bp!=null ) {
+			   map.put("highBp", bp.get(0)[1]);
+			   map.put("lowBp", bp.get(0)[0]);
+			   map.put("TimeStamp", bp.get(0)[2]);
+//			   fchealthBp.setHighBP(highBp);
+//			   fchealthBp.setLowBP(lowBp);
+//			   System.out.println(fchealthBp);
+			return new ResponseEntity<>(map, HttpStatus.OK);
 		}
 		   else{
-			   HashMap<String, Object> map = new HashMap<>();
+			
 			   map.put("ErrorResponse", "No Patient");
 			    return new ResponseEntity<>(map, HttpStatus.NOT_FOUND);
 			  

@@ -12,7 +12,7 @@ import com.miraclesoft.io.model.MedPrescriptionDTO;
 
 public interface CustomFCHRepository {
 
-	long findRecentValueByPid(long patientId, String query);
+	List<Object[]> findRecentValueByPid(long patientId, String query);
 	
 	List<AverageEntity> findAverageValues(long patientId, String query, int year) throws Exception;
 	List<AverageCholestrolEntity> findCholestrolAverageValues(long patientId, String query, int year) throws Exception;

@@ -96,15 +96,16 @@ public class FCHealthWeightContoller {
 	   @GetMapping(value="/CurrentWeight/{patientId}",produces=MediaType.APPLICATION_JSON_VALUE)
 	   public ResponseEntity<?> recentWeightOfPatient(@PathVariable("patientId") long patientId, @Value("${weightQuery}") String query) {
 		  // System.out.println (query);
-		   long valueByPid = weightRepository.findRecentValueByPid(patientId, query);
+		   List<Object[]> valueByPid = weightRepository.findRecentValueByPid(patientId, query);
 		   
 		   HashMap<String, Object> map = new HashMap<>();
 
 //		    map.put("currentWeight", valueByPid);
 
 		   
-		   if(valueByPid != 0) {
-			   map.put("currentWeight", valueByPid);
+		   if(valueByPid != null) {
+			   map.put("currentWeight", valueByPid.get(0)[0]);
+			   map.put("TimeStamp", valueByPid.get(0)[1]);
 			   return new ResponseEntity<>(map, HttpStatus.OK);
 		   }
 		   else {

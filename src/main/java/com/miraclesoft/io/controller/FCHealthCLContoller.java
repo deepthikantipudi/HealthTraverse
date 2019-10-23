@@ -57,12 +57,13 @@ public class FCHealthCLContoller {
 	   public ResponseEntity<?> recentClOfPatient(@PathVariable("patientId") long patientId, @Value("${clQuery}") String query) throws Exception {
 		  // System.out.println (query);
 		   
-		   long valueByPid = clRepository.findRecentValueByPid(patientId, query);
+		   List<Object[]> valueByPid = clRepository.findRecentValueByPid(patientId, query);
 		   HashMap<String, Object> map = new HashMap<>();
 
-		   if(valueByPid != 0) {
+		   if(valueByPid != null) {
 			
-			   map.put("currentCholestrol", valueByPid);
+			   map.put("currentCholestrol", valueByPid.get(0)[0]);
+			   map.put("TimeStamp", valueByPid.get(0)[1]);
 			   return new ResponseEntity<>(map, HttpStatus.OK);
 		   }
 		   else {

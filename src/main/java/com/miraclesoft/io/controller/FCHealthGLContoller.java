@@ -56,11 +56,12 @@ public class FCHealthGLContoller {
 	   @GetMapping("/CurrentGL/{patientId}")
 	   public ResponseEntity<?> recentGlOfPatient(@PathVariable("patientId") long patientId, @Value("${glQuery}") String query) {
 		  // System.out.println (query);
-		   long valueByPid = glRepository.findRecentValueByPid(patientId, query);
+		   List<Object[]> valueByPid = glRepository.findRecentValueByPid(patientId, query);
 		   HashMap<String, Object> map = new HashMap<>();
-		   if(valueByPid != 0) {
+		   if(valueByPid != null) {
 				
-			   map.put("currentGlucose", valueByPid);
+			   map.put("currentGlucose", valueByPid.get(0)[0]);
+			   map.put("TimeStamp", valueByPid.get(0)[1]);
 			   return new ResponseEntity<>(map, HttpStatus.OK);
 		   }
 		   else {
