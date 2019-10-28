@@ -39,10 +39,37 @@ public class PatientProfile {
 	
 	@Column(name="WEIGHT")
 	private long weight;
-	
+	@Column(name="GENDER")
+	private String gender;
+	@Column(name="AGE")
+	private int age;
+
 	public PatientProfile() {
 		super();
 	}
+	
+
+	public PatientProfile(long pid, long height, long weight) {
+		super();
+		this.pid = pid;
+		this.height = height;
+		this.weight = weight;
+	}
+
+
+	public PatientProfile(long pid, long userId, String relation, String patientName, long height, long weight,
+			String gender, int age) {
+		super();
+		this.pid = pid;
+		this.userId = userId;
+		this.relation = relation;
+		this.patientName = patientName;
+		this.height = height;
+		this.weight = weight;
+		this.gender = gender;
+		this.age = age;
+	}
+
 
 	public PatientProfile(String relation, String patientName, long height, long weight) {
 		super();
@@ -118,11 +145,36 @@ public class PatientProfile {
 	public void setWeight(long weight) {
 		this.weight = weight;
 	}
+	
+	
+
+	public String getGender() {
+		return gender;
+	}
+
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+
+	public int getAge() {
+		return age;
+	}
+
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
 
 	@Override
 	public String toString() {
 		return "PatientProfile [pid=" + pid + ", userId=" + userId + ", relation=" + relation + ", patientName="
-				+ patientName + ", height=" + height + ", weight=" + weight + "]";
+				+ patientName + ", height=" + height + ", weight=" + weight + ", gender=" + gender + ", age=" + age
+				+ "]";
 	}
+
+
 	
 }
