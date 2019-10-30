@@ -57,11 +57,20 @@ public class FCHealthGLContoller {
 	   public ResponseEntity<?> recentGlOfPatient(@PathVariable("patientId") long patientId, @Value("${glQuery}") String query) {
 		  // System.out.println (query);
 		   List<Object[]> valueByPid = glRepository.findRecentValueByPid(patientId, query);
+		   long gl = Long.parseLong(String.valueOf(valueByPid.get(0)[0]));
+		   String category;
+
+			if (gl > 100) {
+				category = "high level";
+			} else {
+				category = "low level";
+			}
 		   HashMap<String, Object> map = new HashMap<>();
 		   if(valueByPid != null) {
 				
 			   map.put("currentGlucose", valueByPid.get(0)[0]);
 			   map.put("TimeStamp", valueByPid.get(0)[1]);
+			   map.put("Gl state", category);
 			   return new ResponseEntity<>(map, HttpStatus.OK);
 		   }
 		   else {

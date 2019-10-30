@@ -59,10 +59,25 @@ public class FCHealthBPController {
 		   List<Object[]> bp = bpRepository.findRecentValueByPid(patientId, query1);
 //		   List<Object[]> lowBp = bpRepository.findRecentValueByPid(patientId, query2);
 		   HashMap<String, Object> map = new HashMap<>(); 
+		   long lbp=Long.parseLong(String.valueOf(bp.get(0)[0]));
+		   long hbp=Long.parseLong(String.valueOf(bp.get(0)[1]));
+	       String category;
+		   
+		   if(lbp < 80 || hbp > 120) {
+			   
+			   category = "Not in normal Range";
+		   }
+			
+		   else {
+			   category = "Normal Blood Pressure";
+		   }
+		   
+		   
 		   if(bp!=null ) {
 			   map.put("highBp", bp.get(0)[1]);
 			   map.put("lowBp", bp.get(0)[0]);
 			   map.put("TimeStamp", bp.get(0)[2]);
+			   map.put("BP State", category);
 //			   fchealthBp.setHighBP(highBp);
 //			   fchealthBp.setLowBP(lowBp);
 //			   System.out.println(fchealthBp);
