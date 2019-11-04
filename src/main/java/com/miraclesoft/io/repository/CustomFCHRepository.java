@@ -20,7 +20,7 @@ public interface CustomFCHRepository {
 	List<AverageBloodPressureEntity> findAverageBPValues(long patientId, String query, int year) throws Exception;
 	
 	//Prescription
-	List fetchMedications(String query,long pid) throws Exception;
+	List<Object[]> fetchMedications(String query,long pid) throws Exception;
 	///
 	
 	List<Object[]> fetchMedicalconditions(String query, long pid);

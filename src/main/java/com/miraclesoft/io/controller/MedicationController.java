@@ -1,13 +1,16 @@
 package com.miraclesoft.io.controller;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
 
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -63,7 +66,7 @@ public class MedicationController {
 	 @RequestMapping(value="/addmedication",method=RequestMethod.POST,consumes = {"multipart/form-data"})
 	 public Medication_Details addmedication(@RequestParam("DESCRIPTION") String desc,@RequestParam("MEDNAME") String title,@RequestParam("MEDIMAGE") MultipartFile im) throws IOException {
 	 System.out.println("inserting into database....");
-
+     
 
 	// medrepo.save(med);
 	 Medication_Details med=new Medication_Details();
@@ -71,6 +74,7 @@ public class MedicationController {
 	 med.setMEDNAME(title);
 	// med.setDosage(dosage);
 	 med.setMedImage(im.getBytes());
+//	 med.set
 
 	 return medrepo.save(med);
 
@@ -80,11 +84,27 @@ public class MedicationController {
 	 
 	 
 	 @GetMapping(value="/getmedpres/{pid}",produces=MediaType.APPLICATION_JSON_VALUE)
-	    public List<MedPrescriptionDTO> fetchMedications(@Value("${fetchAllPres}") String query, @PathVariable long pid) throws Exception {
+	    public ResponseEntity<?>  fetchMedications(@Value("${fetchAllPres}") String query, @PathVariable long pid) throws Exception {
 		 System.out.println("fetching records from database....");
-		 return medrepo.fetchMedications(query,pid);
+		 List<Object[]> valueByPid =  medrepo.fetchMedications(query,pid);
 		 
 		// return abc.get(0).getDosage();
+		 HashMap<String, Object> map = new HashMap<>();
+			
+			
+			if (valueByPid != null) {
+
+				map.put("PID", valueByPid.get(0)[0]);
+				map.put("DESCRIPTION", valueByPid.get(0)[1]);
+				map.put("MEDNAME", valueByPid.get(0)[2]);
+				map.put("MEDSCHEDULE", valueByPid.get(0)[3]);
+				map.put("MEDIMAGE", valueByPid.get(0)[4]);
+				return new ResponseEntity<>(map, HttpStatus.OK);
+			} else {
+
+				map.put("ErrorResponse", "No Patient");
+				return new ResponseEntity<>(map, HttpStatus.NOT_FOUND);
+			}
 	         
 	         
 	    }
