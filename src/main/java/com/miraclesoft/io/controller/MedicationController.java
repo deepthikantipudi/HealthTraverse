@@ -1,6 +1,7 @@
 package com.miraclesoft.io.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -35,159 +36,176 @@ import com.miraclesoft.io.repository.MedicationRepository;
 import com.miraclesoft.io.repository.PatientPrescriptionDetailsRepo;
 import com.miraclesoft.io.repository.PatientPrescriptionRepo;
 
-
-@CrossOrigin(origins="*")
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api/medications")
 public class MedicationController {
-	
+
 	@Autowired
 	MedicationRepository medrepo;
-	
+
 	@Autowired
 	PatientPrescriptionRepo patientPrescriptionRepo;
-	
+
 	@Autowired
 	PatientPrescriptionDetailsRepo patientPrescriptionDetailsRepo;
-	
-	//Medication_Details medi-new Medication_Details();
+
+	// Medication_Details medi-new Medication_Details();
 //	   ObjectMapper Obj = new ObjectMapper(); 
-	
-	
-	 
+
 //	 @PostMapping("/addmedication")
 //	 public Medication_Details create(@Valid @RequestBody Medication_Details med) {
 //		 System.out.println("inserting into database....");
 //
 //	        return medrepo.save(med);
 //	    }
-	 
-	 
-	 @RequestMapping(value="/addmedication",method=RequestMethod.POST,consumes = {"multipart/form-data"})
-	 public Medication_Details addmedication(@RequestParam("DESCRIPTION") String desc,@RequestParam("MEDNAME") String title,@RequestParam("MEDIMAGE") MultipartFile im) throws IOException {
-	 System.out.println("inserting into database....");
-     
 
-	// medrepo.save(med);
-	 Medication_Details med=new Medication_Details();
-	 med.setDESCRIPTION(desc);
-	 med.setMEDNAME(title);
-	// med.setDosage(dosage);
-	 med.setMedImage(im.getBytes());
-//	 med.set
+	@RequestMapping(value = "/addmedication", method = RequestMethod.POST, consumes = { "multipart/form-data" })
+	public Medication_Details addmedication(@RequestParam("DESCRIPTION") String desc,
+			@RequestParam("MEDNAME") String title, @RequestParam("MEDIMAGE") MultipartFile im) throws IOException {
+		System.out.println("inserting into database....");
 
-	 return medrepo.save(med);
-
-	 }
-	 
-	 //////////////////
-	 
-	 
-	 @GetMapping(value="/getmedpres/{pid}",produces=MediaType.APPLICATION_JSON_VALUE)
-	    public ResponseEntity<?>  fetchMedications(@Value("${fetchAllPres}") String query, @PathVariable long pid) throws Exception {
-		 System.out.println("fetching records from database....");
-		 List<Object[]> valueByPid =  medrepo.fetchMedications(query,pid);
-		 
-		// return abc.get(0).getDosage();
-		 HashMap<String, Object> map = new HashMap<>();
-			
-			
-			if (valueByPid != null) {
-
-				map.put("PID", valueByPid.get(0)[0]);
-				map.put("DESCRIPTION", valueByPid.get(0)[1]);
-				map.put("MEDNAME", valueByPid.get(0)[2]);
-				map.put("MEDSCHEDULE", valueByPid.get(0)[3]);
-				map.put("MEDIMAGE", valueByPid.get(0)[4]);
-				return new ResponseEntity<>(map, HttpStatus.OK);
-			} else {
-
-				map.put("ErrorResponse", "No Patient");
-				return new ResponseEntity<>(map, HttpStatus.NOT_FOUND);
-			}
-	         
-	         
-	    }
-	 
-	 @GetMapping("/getmeds")
-	 public Iterable getmeds() {
-		 return medrepo.findAll();
-	 }
-	 
-	 
-	 @RequestMapping(value="/editmed/{id}",method=RequestMethod.PUT,consumes = {"multipart/form-data"})
-	 public Medication_Details updateMed(@PathVariable int id,@RequestParam("DESCRIPTION") String desc,@RequestParam("MEDNAME") String title,@RequestParam("MEDIMAGE") MultipartFile im) throws IOException {
-	    	
-		 System.out.println("updating record in database....");
-		 Medication_Details med=new Medication_Details();
-		 med.setMEDID(id);
+		// medrepo.save(med);
+		Medication_Details med = new Medication_Details();
 		med.setDESCRIPTION(desc);
-		 med.setMEDNAME(title);
+		med.setMEDNAME(title);
+		med.setMEDSCHEDULE("Twice a day");
+		
 		// med.setDosage(dosage);
-		 med.setMedImage(im.getBytes());
-		 return medrepo.save(med);
-	    }
-	 
-	 @DeleteMapping("/deletemed/{medid}")
-	    public void deletemed(@PathVariable int medid) {
-		 medrepo.findById(medid);
-	          			 System.out.println("deleting from database....");
+		med.setMedImage(im.getBytes());
+		Medication_Details md= medrepo.save(med);
+//	 med.set
+	
+		PatientPrescriptionDetails ppd = new PatientPrescriptionDetails();
+		ppd.setPid(1);
+		ppd.setPresID(41);
+		ppd.setPid(1);
+		
+		System.out.println(med.getMEDID());
+		ppd.setMedid(med.getMEDID());
+		
+		ppd.setDosage("TWICE A DAY");
+		ppd.setMediInstructions("10 ML after brakfast and Dinner");
+		patientPrescriptionDetailsRepo.save(ppd);
+		return md;
+		
 
-	          			medrepo.deleteById(medid);
-	    }
 
-	 
-	 
-	 @DeleteMapping("/{ppdid}")
-	    public void delete(@PathVariable int ppdid) {
-	        patientPrescriptionDetailsRepo.findById(ppdid);
-	          			 System.out.println("deleting from database....");
 
-	       patientPrescriptionDetailsRepo.deleteById(ppdid);
-	    }
+	}
 
-	 
-	 ////////////// Patient Prescription///////////////////////////////////////////////////
-	 
-	 @PostMapping("/addPP")
-	 public PatientPrescription addPP(@RequestBody PatientPrescription pp) {
-		 System.out.println("inserting into database....");
+	//////////////////
 
-	        return patientPrescriptionRepo.save(pp);
-	    }
-	 
-	 @GetMapping("/getPP")
-	 public List<PatientPrescription> getPP() {
-		 return patientPrescriptionRepo.findAll();
-	 }
-	 
-	 @DeleteMapping("PP/{presid}")
-	    public void deletePP(@PathVariable int presid) {
-	        patientPrescriptionRepo.findById(presid);
-	          			 System.out.println("deleting from database....");
+	@GetMapping(value = "/getmedpres/{pid}", produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<?> fetchMedications(@Value("${fetchAllPres}") String query, @PathVariable long pid)
+			throws Exception {
+		System.out.println("fetching records from database....");
+		List<Object[]> valueByPid = medrepo.fetchMedications(query, pid);
+		
+		System.out.println(valueByPid);
+         
+		// return abc.get(0).getDosage();
+		List li =new ArrayList<>();
+		HashMap<String, Object> map;
 
-	       patientPrescriptionRepo.deleteById(presid);
-	    }
-	 
-	 //////////////Patient Prescription Details///////////////////////////////////////////////////
-	 
-	 @PostMapping("/addPPD")
-	 public PatientPrescriptionDetails addPPD(@RequestBody PatientPrescriptionDetails ppd) {
-		 System.out.println("inserting into database....");
+     	if (valueByPid != null) {
+        	for (Object[] result : valueByPid) {
+			map = new HashMap<>();
+			map.put("PID", result[0]);
+			map.put("DESCRIPTION", result[1]);
+			map.put("MEDNAME", result[2]);
+			map.put("MEDSCHEDULE", result[3]);
+			map.put("MEDIMAGE", result[4]);
+			li.add(map);
+		
+    		}
+			
+			return new ResponseEntity<>(li, HttpStatus.OK);
+		} else {
+			map = new HashMap<>();
+			map.put("ErrorResponse", "No Patient");
+			return new ResponseEntity<>(map, HttpStatus.NOT_FOUND);
+		}
 
-	        return patientPrescriptionDetailsRepo.save(ppd);
-	    }
-	 
-	 
-	 @GetMapping("/getPPDS")
-	    public Iterable findAll() {
-		 System.out.println("fetching records from database....");
-	        return patientPrescriptionDetailsRepo.findAll();
-	    }
+	}
+
+	@GetMapping("/getmeds")
+	public Iterable getmeds() {
+		return medrepo.findAll();
+	}
+
+	@RequestMapping(value = "/editmed/{id}", method = RequestMethod.PUT, consumes = { "multipart/form-data" })
+	public Medication_Details updateMed(@PathVariable int id, @RequestParam("DESCRIPTION") String desc,
+			@RequestParam("MEDNAME") String title, @RequestParam("MEDIMAGE") MultipartFile im) throws IOException {
+
+		System.out.println("updating record in database....");
+		Medication_Details med = new Medication_Details();
+		med.setMEDID(id);
+		med.setDESCRIPTION(desc);
+		med.setMEDNAME(title);
+		// med.setDosage(dosage);
+		med.setMedImage(im.getBytes());
+		return medrepo.save(med);
+	}
+
+	@DeleteMapping("/deletemed/{medid}")
+	public void deletemed(@PathVariable int medid) {
+		medrepo.findById(medid);
+		
+		
+		System.out.println("deleting from database....");
+
+		medrepo.deleteById(medid);
+	}
+
+	@DeleteMapping("/{ppdid}")
+	public void delete(@PathVariable int ppdid) {
+		patientPrescriptionDetailsRepo.findById(ppdid);
+		System.out.println("deleting from database....");
+
+		patientPrescriptionDetailsRepo.deleteById(ppdid);
+	}
+
+	////////////// Patient
+	////////////// Prescription///////////////////////////////////////////////////
+
+	@PostMapping("/addPP")
+	public PatientPrescription addPP(@RequestBody PatientPrescription pp) {
+		System.out.println("inserting into database....");
+
+		return patientPrescriptionRepo.save(pp);
+	}
+
+	@GetMapping("/getPP")
+	public List<PatientPrescription> getPP() {
+		return patientPrescriptionRepo.findAll();
+	}
+
+	@DeleteMapping("PP/{presid}")
+	public void deletePP(@PathVariable int presid) {
+		patientPrescriptionRepo.findById(presid);
+		System.out.println("deleting from database....");
+
+		patientPrescriptionRepo.deleteById(presid);
+	}
+
+	////////////// Patient Prescription
+	////////////// Details///////////////////////////////////////////////////
+
+	@PostMapping("/addPPD")
+	public PatientPrescriptionDetails addPPD(@RequestBody PatientPrescriptionDetails ppd) {
+		System.out.println("inserting into database....");
+
+		return patientPrescriptionDetailsRepo.save(ppd);
+	}
+
+	@GetMapping("/getPPDS")
+	public Iterable findAll() {
+		System.out.println("fetching records from database....");
+		return patientPrescriptionDetailsRepo.findAll();
+	}
 //	 
-	 
-	 //////////////////////////////////////////////////////////////////////////////////////
-	 
-	 
+
+	//////////////////////////////////////////////////////////////////////////////////////
 
 }
