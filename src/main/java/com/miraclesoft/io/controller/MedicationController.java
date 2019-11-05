@@ -61,7 +61,7 @@ public class MedicationController {
 //	    }
 
 	@RequestMapping(value = "/addmedication", method = RequestMethod.POST, consumes = { "multipart/form-data" })
-	public Medication_Details addmedication(@RequestParam("DESCRIPTION") String desc,
+	public Medication_Details addmedication(@RequestParam("DESCRIPTION") String desc, @RequestParam("MEDSCHEDULE") String MEDSCHEDULE,
 			@RequestParam("MEDNAME") String title, @RequestParam("MEDIMAGE") MultipartFile im) throws IOException {
 		System.out.println("inserting into database....");
 
@@ -69,7 +69,7 @@ public class MedicationController {
 		Medication_Details med = new Medication_Details();
 		med.setDESCRIPTION(desc);
 		med.setMEDNAME(title);
-		med.setMEDSCHEDULE("Twice a day");
+		med.setMEDSCHEDULE(MEDSCHEDULE);
 		
 		// med.setDosage(dosage);
 		med.setMedImage(im.getBytes());

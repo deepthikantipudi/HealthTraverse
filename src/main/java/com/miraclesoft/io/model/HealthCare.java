@@ -33,11 +33,14 @@ public class HealthCare {
 	@NotEmpty
 	private String linkToApi;
 	
-	@Column(name="IMAGE_LINK" , columnDefinition = "BLOB")
+	@Column(name="IMAGE_LINK" , columnDefinition = "LONGBLOB")
 	@NotNull
 	@NotEmpty
 	@Lob
 	private byte[] image;
+	
+	@Column(name = "CONDITION_NAME")
+	private String conditionName;
 	
 	
 	
@@ -46,13 +49,30 @@ public class HealthCare {
 	}
 	
 
-	public HealthCare(Long conditionTypeId, String linkToApi, @NotNull @NotEmpty @NotNull @NotEmpty byte[] image) {
+
+	public HealthCare(Long conditionTypeId, @NotNull @NotEmpty String linkToApi, @NotNull @NotEmpty byte[] image,
+			String conditionName) {
 		super();
 		this.conditionTypeId = conditionTypeId;
 		this.linkToApi = linkToApi;
 		this.image = image;
-		
+		this.conditionName = conditionName;
 	}
+
+	
+
+
+	public String getConditionName() {
+		return conditionName;
+	}
+
+
+
+	public void setConditionName(String conditionName) {
+		this.conditionName = conditionName;
+	}
+
+
 
 	public Long getConditionTypeId() {
 		return conditionTypeId;
