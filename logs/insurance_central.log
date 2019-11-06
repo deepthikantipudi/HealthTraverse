@@ -9653,3 +9653,7 @@ java.text.ParseException: Unparseable date: "2019-10-05T17:19:04.150Z"
 2019-11-06 09:39:00.077  INFO DESKTOP-7K40GQM --- [nio-8090-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2019-11-06 09:39:00.077  INFO DESKTOP-7K40GQM --- [nio-8090-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
 2019-11-06 09:39:00.104  INFO DESKTOP-7K40GQM --- [nio-8090-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 25 ms
+2019-11-06 10:43:38.451  WARN DESKTOP-7K40GQM --- [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m13s591ms685µs600ns).
+2019-11-06 10:44:48.556  WARN DESKTOP-7K40GQM --- [nio-8090-exec-8] o.s.w.s.PageNotFound                     : Request method 'GET' not supported
+2019-11-06 11:21:36.472  WARN DESKTOP-7K40GQM --- [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m534ms248µs700ns).
+2019-11-06 13:30:10.411  WARN DESKTOP-7K40GQM --- [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=42m33s713ms734µs600ns).
