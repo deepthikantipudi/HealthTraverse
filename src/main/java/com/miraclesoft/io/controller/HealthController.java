@@ -52,8 +52,8 @@ public class HealthController {
 		
 		HealthCare healthCare=new HealthCare();
 //		healthCare.setLinkToApi(linkToApi);
-		healthCare.setConditionName(severity);
-		healthCare.setConditionName(triggers);
+		healthCare.setSeverity(severity);
+		healthCare.setTriggers(triggers);
 		healthCare.setImage(im.getBytes());
 		healthCare.setConditionName(conditionName);
 		healthCareRepository.save(healthCare);
