@@ -110,7 +110,7 @@ public class MedicalConditionsController {
 	    
 	    
 	    @GetMapping(value="/medical-condition/{pid}",produces=MediaType.APPLICATION_JSON_VALUE)
-	    public List<Object[]> fetchMedications(@PathVariable("pid") long pid) throws Exception {
+	    public List<Object[]> fetchMedicalConditions(@PathVariable("pid") long pid) throws Exception {
 		 System.out.println("fetching records from database....");
 		 return medicalConditionsRepository.getMedic(pid);	         
 	         

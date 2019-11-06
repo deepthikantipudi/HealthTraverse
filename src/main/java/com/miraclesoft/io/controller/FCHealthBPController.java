@@ -1,6 +1,7 @@
 package com.miraclesoft.io.controller;
 
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,22 +50,45 @@ public class FCHealthBPController {
 		   fchBP.setBpDate(new Date());
 		   fchBP.setPid(2);
 //		   fchBP.setId(2);
-		  // System.out.println(new Date());
+//		   System.out.println(new Date());
 		   return bpRepository.save(fchBP);
 	   }
 
 	   @GetMapping(value="/CurrentBP/{patientId}",produces=MediaType.APPLICATION_JSON_VALUE)
-	   public ResponseEntity<FCHealthBP>  recentBpOfPatient(@PathVariable("patientId") long patientId, @Value("${highBpQuery}") String query1, @Value("${lowBpQuery}") String query2) {
-		   long highBp = bpRepository.findRecentValueByPid(patientId, query1);
-		   long lowBp = bpRepository.findRecentValueByPid(patientId, query2);
-		   if(highBp != 0 && lowBp != 0  ) {
-			   fchealthBp.setHighBP(highBp);
-			   fchealthBp.setLowBP(lowBp);
-			   System.out.println(fchealthBp);
-			return new ResponseEntity<>(fchealthBp, HttpStatus.OK);
+	   public ResponseEntity<?>  recentBpOfPatient(@PathVariable("patientId") long patientId, @Value("${bpQuery}") String query1) {
+		   List<Object[]> bp = bpRepository.findRecentValueByPid(patientId, query1);
+//		   List<Object[]> lowBp = bpRepository.findRecentValueByPid(patientId, query2);
+		   HashMap<String, Object> map = new HashMap<>(); 
+		   long lbp=Long.parseLong(String.valueOf(bp.get(0)[0]));
+		   long hbp=Long.parseLong(String.valueOf(bp.get(0)[1]));
+	       String category;
+		   
+		   if(lbp < 80 || hbp > 120) {
+			   
+			   category = "Not in normal Range";
+		   }
+			
+		   else {
+			   category = "Normal Blood Pressure";
+		   }
+		   
+		   
+		   if(bp!=null ) {
+			   map.put("highBp", bp.get(0)[1]);
+			   map.put("lowBp", bp.get(0)[0]);
+			   map.put("TimeStamp", bp.get(0)[2]);
+			   map.put("BP State", category);
+//			   fchealthBp.setHighBP(highBp);
+//			   fchealthBp.setLowBP(lowBp);
+//			   System.out.println(fchealthBp);
+			return new ResponseEntity<>(map, HttpStatus.OK);
 		}
-		   else
-			   return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
+		   else{
+			
+			   map.put("ErrorResponse", "No Patient");
+			    return new ResponseEntity<>(map, HttpStatus.NOT_FOUND);
+			  
+		   }
 	   }
 	   
 	   @GetMapping(value="/AverageBP/{patientId}/{year}", produces=MediaType.APPLICATION_JSON_VALUE)

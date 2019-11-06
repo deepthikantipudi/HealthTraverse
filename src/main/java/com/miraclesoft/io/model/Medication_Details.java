@@ -2,20 +2,22 @@ package com.miraclesoft.io.model;
 
 import java.util.Arrays;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+
 
 @Entity
 public class Medication_Details {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
+	
 	@Column(name="MEDID")
+//	@OneToMany(fetch = FetchMode.LAZY, mappedBy = "stock")
 	private int MEDID;
 	// @NotNull
 	 //@Size(min=2, message="Description should have atleast 2 characters")
@@ -27,6 +29,41 @@ public class Medication_Details {
 	
 	@Column(name="MEDIMAGE")
 	private byte[] MEDIMAGE;
+	@Column(name="MEDSCHEDULE")
+	private String MEDSCHEDULE;
+	public Medication_Details() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+
+	public Medication_Details(int mEDID, String dESCRIPTION, String mEDNAME, byte[] mEDIMAGE, String mEDSCHEDULE) {
+		super();
+		MEDID = mEDID;
+		DESCRIPTION = dESCRIPTION;
+		MEDNAME = mEDNAME;
+		MEDIMAGE = mEDIMAGE;
+		MEDSCHEDULE = mEDSCHEDULE;
+	}
+	
+
+
+	public byte[] getMEDIMAGE() {
+		return MEDIMAGE;
+	}
+
+
+	public void setMEDIMAGE(byte[] mEDIMAGE) {
+		MEDIMAGE = mEDIMAGE;
+	}
+
+
+	public String getMEDSCHEDULE() {
+		return MEDSCHEDULE;
+	}
+
+
+	
 
 	public int getMEDID() {
 		return MEDID;
@@ -66,18 +103,16 @@ public class Medication_Details {
 				+ ", medImage=" + Arrays.toString(MEDIMAGE) + "]";
 	}
 
-	public Medication_Details(int mEDID, String dESCRIPTION, String mEDNAME, byte[] medImage) {
-		super();
-		MEDID = mEDID;
-		DESCRIPTION = dESCRIPTION;
-		MEDNAME = mEDNAME;
-		this.MEDIMAGE = medImage;
+
+	public void setMEDSCHEDULE(String mEDSCHEDULE2) {
+		// TODO Auto-generated method stub
+		MEDSCHEDULE= mEDSCHEDULE2;
+		
 	}
 
-	public Medication_Details() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
+	
+
+	
 	
 	
 	

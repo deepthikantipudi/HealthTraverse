@@ -26,5 +26,8 @@ public interface MedicationRepository extends CrudRepository<Medication_Details,
 	
 //	@Query(value="FROM Medication_Details md Inner JOIN PatientPrescriptionDetails ppd ON md.MEDID=ppd.medid ")
 //	List<Medication_Details> fetchMedications();
+	
+//	@Query(value="SELECT ppd.PID,md.DESCRIPTION,md.MEDNAME, ppd.DOSAGE, ppd.MEDI_INSTRUCTIONS FROM [dbo].[MEDICATION_DETAILS] md INNER JOIN [dbo].[PATIENT_PRESCRIPTION_DETAILS] ppd ON md.MEDID=ppd.MEDID WHERE ppd.PID=?1")
+//	List getMedic(long pid);
 
 }

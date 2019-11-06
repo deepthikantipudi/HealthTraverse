@@ -1,6 +1,8 @@
 package com.miraclesoft.io.controller;
 
+import java.math.BigInteger;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +20,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.miraclesoft.io.model.AverageEntity;
 import com.miraclesoft.io.model.FCHealthWeight;
+import com.miraclesoft.io.model.PatientProfile;
 import com.miraclesoft.io.repository.FCHealthWeightRepository;
+import com.miraclesoft.io.repository.PatientRepository;
 import com.miraclesoft.io.services.CommonService;
 
 
@@ -30,6 +34,9 @@ public class FCHealthWeightContoller {
 	
 	@Autowired
 	private FCHealthWeightRepository weightRepository;
+	
+	@Autowired
+	private PatientRepository patientRepository;
 	
 	@Autowired
 	private CommonService commonService;
@@ -93,13 +100,59 @@ public class FCHealthWeightContoller {
 //	  
 
 	   @GetMapping(value="/CurrentWeight/{patientId}",produces=MediaType.APPLICATION_JSON_VALUE)
-	   public ResponseEntity<?>  recentWeightOfPatient(@PathVariable("patientId") long patientId, @Value("${weightQuery}") String query) {
+	   public ResponseEntity<?> recentWeightOfPatient(@PathVariable("patientId") long patientId, @Value("${weightQuery}") String query) {
 		  // System.out.println (query);
-		   long valueByPid = weightRepository.findRecentValueByPid(patientId, query);
-		   if(valueByPid != 0)
-			   return new ResponseEntity<>(valueByPid, HttpStatus.OK);
-		   else
-			    return new ResponseEntity<>("No Patient", HttpStatus.BAD_REQUEST);
+		   List<Object[]> valueByPid = weightRepository.findRecentValueByPid(patientId, query);
+		   
+		   HashMap<String, Object> map = new HashMap<>();
+
+//		    map.put("currentWeight", valueByPid);
+//		   long pid=2;
+		   PatientProfile ppf= patientRepository.findById(patientId).get();
+		   long height = ppf.getHeight();
+		   
+		   double bmi;
+//		   List<Object[]>  weight=valueByPid.get(0)[0];
+		   
+		  long weight=Long.parseLong(String.valueOf(valueByPid.get(0)[0]));
+		   
+//		  Long  weight=(Long.) valueByPid.get(0)[0];
+		   
+		  System.out.println("Height="+height+"Weight="+weight);
+		  
+		   bmi= (weight*703)/(height*height*0.39*0.39);
+		   
+		   String category;
+		   
+		   if(bmi <18.5) {
+			   
+			   category = "UnderWeight";
+			   
+		   } else if(bmi >=18.5 || bmi<=24.9) {
+			   
+			   category = "Normal Weight";
+		   } 
+		   else {
+			   category = "over Weight";
+		   }
+		   
+		   
+		   
+		   
+		   if(valueByPid != null) {
+			   System.out.println("valueByPid.get(0)[0]"+valueByPid.get(0)[0]);
+			   map.put("currentWeight", valueByPid.get(0)[0]);
+			   map.put("TimeStamp", valueByPid.get(0)[1]);
+			   map.put("BMI", bmi);
+			   map.put("BMI status", category);
+			   return new ResponseEntity<>(map, HttpStatus.OK);
+		   }
+		   else {
+			   map.put("ErrorResponse", "No Patient");
+			    return new ResponseEntity<>(map, HttpStatus.NOT_FOUND);
+			  
+		   }
+			   
 	   }
 	   
 	   @GetMapping(value="/AverageWeight/{patientId}/{year}", produces=MediaType.APPLICATION_JSON_VALUE)

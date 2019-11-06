@@ -12,7 +12,7 @@ import com.miraclesoft.io.model.MedPrescriptionDTO;
 
 public interface CustomFCHRepository {
 
-	long findRecentValueByPid(long patientId, String query);
+	List<Object[]> findRecentValueByPid(long patientId, String query);
 	
 	List<AverageEntity> findAverageValues(long patientId, String query, int year) throws Exception;
 	List<AverageCholestrolEntity> findCholestrolAverageValues(long patientId, String query, int year) throws Exception;
@@ -20,7 +20,7 @@ public interface CustomFCHRepository {
 	List<AverageBloodPressureEntity> findAverageBPValues(long patientId, String query, int year) throws Exception;
 	
 	//Prescription
-	List fetchMedications(String query) throws Exception;
+	List<Object[]> fetchMedications(String query,long pid) throws Exception;
 	///
 	
 	List<Object[]> fetchMedicalconditions(String query, long pid);

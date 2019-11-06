@@ -25,20 +25,22 @@ public class CustomFCHRepositoryImpl implements CustomFCHRepository {
 	@Autowired
 	EntityManager entityManager;
 	
+	
 	@Override
-	public long findRecentValueByPid(long patientId, String sqlQuery) {
+	public List<Object[]> findRecentValueByPid(long patientId, String sqlQuery) {
 		//String sqlQuery="SELECT weight, to_char(w_date,'DD/MM/YYYY HH24:MI:SS') as w_date1 FROM fchealth_weight " +
 			//				"WHERE pid = ? Order by w_date desc ";
 		long res = 0l;
+		 List<Object[]> result= null;
 		Query query = entityManager.createNativeQuery(sqlQuery);
         query.setParameter(1, patientId );
         try {
-        	List<Object[]> result = query.getResultList();
-        	res = Long.parseLong(String.valueOf(result.get(0)[0]));
+        	 result = query.getResultList();
+//        	res = Long.parseLong(String.valueOf(result.get(0)[0]));
         }catch(Exception ex) {
         	ex.printStackTrace();
         }
-        return res;
+        return result;
 	}
 
 	@Override
@@ -218,9 +220,10 @@ public class CustomFCHRepositoryImpl implements CustomFCHRepository {
 	}
 
 	@Override
-	public List<Object[]> fetchMedications(String fetchall) throws Exception {
-		// TODO Auto-generated method stub
+	public List<Object[]> fetchMedications(String fetchall, long pid) throws Exception {
+		// TODO Auto-generated method stub\\\\\
 		Query query = entityManager.createNativeQuery(fetchall);
+		query.setParameter(1, pid );
 		List<Object[]> jh = query.getResultList();
 		return jh;
 	}

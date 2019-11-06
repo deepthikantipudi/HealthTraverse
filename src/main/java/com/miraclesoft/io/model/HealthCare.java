@@ -33,11 +33,18 @@ public class HealthCare {
 	@NotEmpty
 	private String linkToApi;
 	
-	@Column(name="IMAGE_LINK" , columnDefinition = "BLOB")
+	@Column(name="IMAGE_LINK" , columnDefinition = "LONGBLOB")
 	@NotNull
 	@NotEmpty
 	@Lob
 	private byte[] image;
+	
+	@Column(name = "SEVERITY")
+	private String severity;
+	@Column(name = "CONDITION_NAME")
+	private String conditionName;
+	@Column(name = "TRIGGERS")
+	private String triggers;
 	
 	
 	
@@ -46,13 +53,73 @@ public class HealthCare {
 	}
 	
 
-	public HealthCare(Long conditionTypeId, String linkToApi, @NotNull @NotEmpty @NotNull @NotEmpty byte[] image) {
+
+	
+
+
+	public HealthCare(Long conditionTypeId, @NotNull @NotEmpty String linkToApi, @NotNull @NotEmpty byte[] image,
+			String severity, String conditionName, String triggers) {
 		super();
 		this.conditionTypeId = conditionTypeId;
 		this.linkToApi = linkToApi;
 		this.image = image;
-		
+		this.severity = severity;
+		this.conditionName = conditionName;
+		this.triggers = triggers;
 	}
+
+
+
+
+
+
+	public String getSeverity() {
+		return severity;
+	}
+
+
+
+
+
+
+	public void setSeverity(String severity) {
+		this.severity = severity;
+	}
+
+
+
+
+
+
+	public String getTriggers() {
+		return triggers;
+	}
+
+
+
+
+
+
+	public void setTriggers(String triggers) {
+		this.triggers = triggers;
+	}
+
+
+
+
+
+
+	public String getConditionName() {
+		return conditionName;
+	}
+
+
+
+	public void setConditionName(String conditionName) {
+		this.conditionName = conditionName;
+	}
+
+
 
 	public Long getConditionTypeId() {
 		return conditionTypeId;
