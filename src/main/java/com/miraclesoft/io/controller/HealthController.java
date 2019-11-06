@@ -42,13 +42,18 @@ public class HealthController {
 	}
 
 	@PostMapping(value="/add-condition-types", consumes = { "multipart/form-data" })
-	public String saveConditionType(@RequestParam("linkToApi")String linkToApi,
-			@RequestParam("conditionName")String conditionName,@RequestParam("diagnosisDate") String diagnosisDate,
+	public String saveConditionType(
+			@RequestParam("conditionName")String conditionName,
+			@RequestParam("severity")String severity,
+			@RequestParam("triggers")String triggers,
+			@RequestParam("diagnosisDate") String diagnosisDate,
 			@RequestParam("image")MultipartFile im) throws IOException, ParseException
 	{
 		
 		HealthCare healthCare=new HealthCare();
-		healthCare.setLinkToApi(linkToApi);
+//		healthCare.setLinkToApi(linkToApi);
+		healthCare.setConditionName(severity);
+		healthCare.setConditionName(triggers);
 		healthCare.setImage(im.getBytes());
 		healthCare.setConditionName(conditionName);
 		healthCareRepository.save(healthCare);

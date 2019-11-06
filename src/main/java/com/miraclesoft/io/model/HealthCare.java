@@ -39,8 +39,12 @@ public class HealthCare {
 	@Lob
 	private byte[] image;
 	
+	@Column(name = "SEVERITY")
+	private String severity;
 	@Column(name = "CONDITION_NAME")
 	private String conditionName;
+	@Column(name = "TRIGGERS")
+	private String triggers;
 	
 	
 	
@@ -50,16 +54,59 @@ public class HealthCare {
 	
 
 
+	
+
+
 	public HealthCare(Long conditionTypeId, @NotNull @NotEmpty String linkToApi, @NotNull @NotEmpty byte[] image,
-			String conditionName) {
+			String severity, String conditionName, String triggers) {
 		super();
 		this.conditionTypeId = conditionTypeId;
 		this.linkToApi = linkToApi;
 		this.image = image;
+		this.severity = severity;
 		this.conditionName = conditionName;
+		this.triggers = triggers;
 	}
 
-	
+
+
+
+
+
+	public String getSeverity() {
+		return severity;
+	}
+
+
+
+
+
+
+	public void setSeverity(String severity) {
+		this.severity = severity;
+	}
+
+
+
+
+
+
+	public String getTriggers() {
+		return triggers;
+	}
+
+
+
+
+
+
+	public void setTriggers(String triggers) {
+		this.triggers = triggers;
+	}
+
+
+
+
 
 
 	public String getConditionName() {
