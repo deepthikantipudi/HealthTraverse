@@ -87,7 +87,6 @@ public class HealthController {
     @DeleteMapping("/conditions-types/{id}")
 	public String deleteConditions(@PathVariable Long id)
 	{
-    	healthCareRepository.findById(id).orElseThrow(RecordNotFoundException::new);
 		 healthCareRepository.deleteById(id);
 		 return "deleted";
 	}
