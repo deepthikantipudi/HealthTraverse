@@ -23,5 +23,5 @@ public interface CustomFCHRepository {
 	List<Object[]> fetchMedications(String query,long pid) throws Exception;
 	///
 	
-	List<Object[]> fetchMedicalconditions(String query, long pid);
+	List<Object[]> fetchMedicalconditions(String query, long pid) throws Exception;
 }

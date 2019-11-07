@@ -229,11 +229,11 @@ public class CustomFCHRepositoryImpl implements CustomFCHRepository {
 	}
 
 	@Override
-	public List<Object[]> fetchMedicalconditions(String mcquery, long pid) {
+	public List<Object[]> fetchMedicalconditions(String fetchall, long pid) {
 		// TODO Auto-generated method stub
-		Query q = entityManager.createNativeQuery(mcquery);
-		q.setParameter(1, pid );
-		List<Object[]> conditions = q.getResultList();
+		Query query = entityManager.createNativeQuery(fetchall);
+		query.setParameter(1, pid );
+		List<Object[]> conditions = query.getResultList();
 		return conditions;
 	}
 			
