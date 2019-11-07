@@ -9657,3 +9657,227 @@ java.text.ParseException: Unparseable date: "2019-10-05T17:19:04.150Z"
 2019-11-06 10:44:48.556  WARN DESKTOP-7K40GQM --- [nio-8090-exec-8] o.s.w.s.PageNotFound                     : Request method 'GET' not supported
 2019-11-06 11:21:36.472  WARN DESKTOP-7K40GQM --- [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m534ms248µs700ns).
 2019-11-06 13:30:10.411  WARN DESKTOP-7K40GQM --- [l-1 housekeeper] c.z.h.p.HikariPool                       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=42m33s713ms734µs600ns).
+2019-11-07 09:42:22.219  INFO DESKTOP-7K40GQM --- [           main] c.m.i.WorkshopApplication                : Starting WorkshopApplication on DESKTOP-7K40GQM with PID 16816 (C:\Users\16605\Desktop\HealthTraverse\target\classes started by 16605 in C:\Users\16605\Desktop\HealthTraverse)
+2019-11-07 09:42:22.224  INFO DESKTOP-7K40GQM --- [           main] c.m.i.WorkshopApplication                : The following profiles are active: dev
+2019-11-07 09:42:23.143  INFO DESKTOP-7K40GQM --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-07 09:42:23.258  INFO DESKTOP-7K40GQM --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 109ms. Found 18 repository interfaces.
+2019-11-07 09:42:23.550  INFO DESKTOP-7K40GQM --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9f83080d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-07 09:42:23.746  INFO DESKTOP-7K40GQM --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8090 (http)
+2019-11-07 09:42:23.757  INFO DESKTOP-7K40GQM --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8090"]
+2019-11-07 09:42:23.765  INFO DESKTOP-7K40GQM --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-11-07 09:42:23.765  INFO DESKTOP-7K40GQM --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-11-07 09:42:23.929  INFO DESKTOP-7K40GQM --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-11-07 09:42:23.929  INFO DESKTOP-7K40GQM --- [           main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 1676 ms
+2019-11-07 09:42:24.171  INFO DESKTOP-7K40GQM --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2019-11-07 09:42:25.758  INFO DESKTOP-7K40GQM --- [           main] c.z.h.p.PoolBase                         : HikariPool-1 - Driver does not support get/set network timeout for connections. (This operation is not supported.)
+2019-11-07 09:42:26.051  INFO DESKTOP-7K40GQM --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2019-11-07 09:42:26.104  INFO DESKTOP-7K40GQM --- [           main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-11-07 09:42:26.146  INFO DESKTOP-7K40GQM --- [           main] o.h.Version                              : HHH000412: Hibernate Core {5.3.11.Final}
+2019-11-07 09:42:26.147  INFO DESKTOP-7K40GQM --- [           main] o.h.c.Environment                        : HHH000206: hibernate.properties not found
+2019-11-07 09:42:26.237  INFO DESKTOP-7K40GQM --- [           main] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-11-07 09:42:26.352  INFO DESKTOP-7K40GQM --- [           main] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2019-11-07 09:42:27.481  WARN DESKTOP-7K40GQM --- [           main] o.h.b.i.InFlightMetadataCollectorImpl    : HHH000069: Duplicate generator name sequence-generator
+2019-11-07 09:42:27.994  INFO DESKTOP-7K40GQM --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-07 09:42:28.445  INFO DESKTOP-7K40GQM --- [           main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-11-07 09:42:28.638  INFO DESKTOP-7K40GQM --- [           main] c.m.i.s.FileStorageService               : Inside FileStorageService Constructor
+2019-11-07 09:42:28.638  INFO DESKTOP-7K40GQM --- [           main] c.m.i.s.FileStorageService               : About to create file storage location as mentioned in properties file
+2019-11-07 09:42:29.165  WARN DESKTOP-7K40GQM --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-07 09:42:29.289  INFO DESKTOP-7K40GQM --- [           main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-11-07 09:42:29.406  INFO DESKTOP-7K40GQM --- [           main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-07 09:42:29.800  INFO DESKTOP-7K40GQM --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-11-07 09:42:29.815  INFO DESKTOP-7K40GQM --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-11-07 09:42:29.841  INFO DESKTOP-7K40GQM --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-11-07 09:42:29.947  INFO DESKTOP-7K40GQM --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_1
+2019-11-07 09:42:29.958  INFO DESKTOP-7K40GQM --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_2
+2019-11-07 09:42:29.965  INFO DESKTOP-7K40GQM --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_3
+2019-11-07 09:42:29.974  INFO DESKTOP-7K40GQM --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_4
+2019-11-07 09:42:30.046  INFO DESKTOP-7K40GQM --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteConditionsUsingDELETE_1
+2019-11-07 09:42:30.085  INFO DESKTOP-7K40GQM --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8090"]
+2019-11-07 09:42:30.124  INFO DESKTOP-7K40GQM --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8090 (http) with context path ''
+2019-11-07 09:42:30.196  INFO DESKTOP-7K40GQM --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8085 (http)
+2019-11-07 09:42:30.197  INFO DESKTOP-7K40GQM --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8085"]
+2019-11-07 09:42:30.198  INFO DESKTOP-7K40GQM --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-11-07 09:42:30.198  INFO DESKTOP-7K40GQM --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-11-07 09:42:30.216  INFO DESKTOP-7K40GQM --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-11-07 09:42:30.216  INFO DESKTOP-7K40GQM --- [           main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 89 ms
+2019-11-07 09:42:30.237  INFO DESKTOP-7K40GQM --- [           main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-11-07 09:42:30.287  INFO DESKTOP-7K40GQM --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8085"]
+2019-11-07 09:42:30.290  INFO DESKTOP-7K40GQM --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8085 (http) with context path ''
+2019-11-07 09:42:30.292  INFO DESKTOP-7K40GQM --- [           main] c.m.i.WorkshopApplication                : Started WorkshopApplication in 8.378 seconds (JVM running for 9.415)
+2019-11-07 09:42:58.062  INFO DESKTOP-7K40GQM --- [on(1)-127.0.0.1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-07 09:42:58.062  INFO DESKTOP-7K40GQM --- [on(1)-127.0.0.1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2019-11-07 09:42:58.087  INFO DESKTOP-7K40GQM --- [on(1)-127.0.0.1] o.s.w.s.DispatcherServlet                : Completed initialization in 25 ms
+2019-11-07 10:12:11.019  INFO DESKTOP-7K40GQM --- [on(3)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-11-07 10:12:11.140  INFO DESKTOP-7K40GQM --- [on(3)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor           : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-07 10:12:11.145  INFO DESKTOP-7K40GQM --- [on(3)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-11-07 10:12:11.147  INFO DESKTOP-7K40GQM --- [on(3)-127.0.0.1] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2019-11-07 10:12:11.150  INFO DESKTOP-7K40GQM --- [on(3)-127.0.0.1] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2019-11-07 10:12:13.959  INFO DESKTOP-7K40GQM --- [           main] c.m.i.WorkshopApplication                : Starting WorkshopApplication on DESKTOP-7K40GQM with PID 13768 (C:\Users\16605\Desktop\HealthTraverse\target\classes started by 16605 in C:\Users\16605\Desktop\HealthTraverse)
+2019-11-07 10:12:13.964  INFO DESKTOP-7K40GQM --- [           main] c.m.i.WorkshopApplication                : The following profiles are active: dev
+2019-11-07 10:12:14.765  INFO DESKTOP-7K40GQM --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-07 10:12:14.867  INFO DESKTOP-7K40GQM --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97ms. Found 18 repository interfaces.
+2019-11-07 10:12:15.123  INFO DESKTOP-7K40GQM --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$bad2a1b5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-07 10:12:15.309  INFO DESKTOP-7K40GQM --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8090 (http)
+2019-11-07 10:12:15.320  INFO DESKTOP-7K40GQM --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8090"]
+2019-11-07 10:12:15.328  INFO DESKTOP-7K40GQM --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-11-07 10:12:15.328  INFO DESKTOP-7K40GQM --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-11-07 10:12:15.512  INFO DESKTOP-7K40GQM --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-11-07 10:12:15.513  INFO DESKTOP-7K40GQM --- [           main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 1524 ms
+2019-11-07 10:12:15.719  INFO DESKTOP-7K40GQM --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2019-11-07 10:12:17.324  INFO DESKTOP-7K40GQM --- [           main] c.z.h.p.PoolBase                         : HikariPool-1 - Driver does not support get/set network timeout for connections. (This operation is not supported.)
+2019-11-07 10:12:17.604  INFO DESKTOP-7K40GQM --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2019-11-07 10:12:17.656  INFO DESKTOP-7K40GQM --- [           main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-11-07 10:12:17.698  INFO DESKTOP-7K40GQM --- [           main] o.h.Version                              : HHH000412: Hibernate Core {5.3.11.Final}
+2019-11-07 10:12:17.699  INFO DESKTOP-7K40GQM --- [           main] o.h.c.Environment                        : HHH000206: hibernate.properties not found
+2019-11-07 10:12:17.788  INFO DESKTOP-7K40GQM --- [           main] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-11-07 10:12:17.898  INFO DESKTOP-7K40GQM --- [           main] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2019-11-07 10:12:19.047  WARN DESKTOP-7K40GQM --- [           main] o.h.b.i.InFlightMetadataCollectorImpl    : HHH000069: Duplicate generator name sequence-generator
+2019-11-07 10:12:19.543  INFO DESKTOP-7K40GQM --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-07 10:12:19.981  INFO DESKTOP-7K40GQM --- [           main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-11-07 10:12:20.346  INFO DESKTOP-7K40GQM --- [           main] c.m.i.s.FileStorageService               : Inside FileStorageService Constructor
+2019-11-07 10:12:20.346  INFO DESKTOP-7K40GQM --- [           main] c.m.i.s.FileStorageService               : About to create file storage location as mentioned in properties file
+2019-11-07 10:12:20.645  WARN DESKTOP-7K40GQM --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-07 10:12:20.765  INFO DESKTOP-7K40GQM --- [           main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-11-07 10:12:20.866  INFO DESKTOP-7K40GQM --- [           main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-07 10:12:21.239  INFO DESKTOP-7K40GQM --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-11-07 10:12:21.253  INFO DESKTOP-7K40GQM --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-11-07 10:12:21.281  INFO DESKTOP-7K40GQM --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-11-07 10:12:21.390  INFO DESKTOP-7K40GQM --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_1
+2019-11-07 10:12:21.401  INFO DESKTOP-7K40GQM --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_2
+2019-11-07 10:12:21.408  INFO DESKTOP-7K40GQM --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_3
+2019-11-07 10:12:21.417  INFO DESKTOP-7K40GQM --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_4
+2019-11-07 10:12:21.487  INFO DESKTOP-7K40GQM --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteConditionsUsingDELETE_1
+2019-11-07 10:12:21.525  INFO DESKTOP-7K40GQM --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8090"]
+2019-11-07 10:12:21.541  INFO DESKTOP-7K40GQM --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8090 (http) with context path ''
+2019-11-07 10:12:21.615  INFO DESKTOP-7K40GQM --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8085 (http)
+2019-11-07 10:12:21.616  INFO DESKTOP-7K40GQM --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8085"]
+2019-11-07 10:12:21.616  INFO DESKTOP-7K40GQM --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-11-07 10:12:21.616  INFO DESKTOP-7K40GQM --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-11-07 10:12:21.635  INFO DESKTOP-7K40GQM --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-11-07 10:12:21.636  INFO DESKTOP-7K40GQM --- [           main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 92 ms
+2019-11-07 10:12:21.667  INFO DESKTOP-7K40GQM --- [           main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-11-07 10:12:21.712  INFO DESKTOP-7K40GQM --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8085"]
+2019-11-07 10:12:21.716  INFO DESKTOP-7K40GQM --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8085 (http) with context path ''
+2019-11-07 10:12:21.718  INFO DESKTOP-7K40GQM --- [           main] c.m.i.WorkshopApplication                : Started WorkshopApplication in 7.985 seconds (JVM running for 8.768)
+2019-11-07 10:12:22.121  INFO DESKTOP-7K40GQM --- [on(1)-127.0.0.1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-07 10:12:22.121  INFO DESKTOP-7K40GQM --- [on(1)-127.0.0.1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2019-11-07 10:12:22.127  INFO DESKTOP-7K40GQM --- [on(1)-127.0.0.1] o.s.w.s.DispatcherServlet                : Completed initialization in 6 ms
+2019-11-07 10:29:34.895  INFO DESKTOP-7K40GQM --- [on(3)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-11-07 10:29:35.161  INFO DESKTOP-7K40GQM --- [on(3)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor           : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-07 10:29:35.171  INFO DESKTOP-7K40GQM --- [on(3)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-11-07 10:29:35.175  INFO DESKTOP-7K40GQM --- [on(3)-127.0.0.1] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2019-11-07 10:29:35.179  INFO DESKTOP-7K40GQM --- [on(3)-127.0.0.1] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2019-11-07 10:29:40.912  INFO DESKTOP-7K40GQM --- [           main] c.m.i.WorkshopApplication                : Starting WorkshopApplication on DESKTOP-7K40GQM with PID 11592 (C:\Users\16605\Desktop\HealthTraverse\target\classes started by 16605 in C:\Users\16605\Desktop\HealthTraverse)
+2019-11-07 10:29:40.922  INFO DESKTOP-7K40GQM --- [           main] c.m.i.WorkshopApplication                : The following profiles are active: dev
+2019-11-07 10:29:42.285  INFO DESKTOP-7K40GQM --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-07 10:29:42.445  INFO DESKTOP-7K40GQM --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 152ms. Found 18 repository interfaces.
+2019-11-07 10:29:42.862  INFO DESKTOP-7K40GQM --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e1197909] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-07 10:29:43.232  INFO DESKTOP-7K40GQM --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8090 (http)
+2019-11-07 10:29:43.251  INFO DESKTOP-7K40GQM --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8090"]
+2019-11-07 10:29:43.263  INFO DESKTOP-7K40GQM --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-11-07 10:29:43.263  INFO DESKTOP-7K40GQM --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-11-07 10:29:43.511  INFO DESKTOP-7K40GQM --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-11-07 10:29:43.511  INFO DESKTOP-7K40GQM --- [           main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 2499 ms
+2019-11-07 10:29:43.897  INFO DESKTOP-7K40GQM --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2019-11-07 10:29:46.225  INFO DESKTOP-7K40GQM --- [           main] c.z.h.p.PoolBase                         : HikariPool-1 - Driver does not support get/set network timeout for connections. (This operation is not supported.)
+2019-11-07 10:29:46.599  INFO DESKTOP-7K40GQM --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2019-11-07 10:29:46.727  INFO DESKTOP-7K40GQM --- [           main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-11-07 10:29:46.848  INFO DESKTOP-7K40GQM --- [           main] o.h.Version                              : HHH000412: Hibernate Core {5.3.11.Final}
+2019-11-07 10:29:46.851  INFO DESKTOP-7K40GQM --- [           main] o.h.c.Environment                        : HHH000206: hibernate.properties not found
+2019-11-07 10:29:47.074  INFO DESKTOP-7K40GQM --- [           main] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-11-07 10:29:47.656  INFO DESKTOP-7K40GQM --- [           main] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2019-11-07 10:29:49.113  WARN DESKTOP-7K40GQM --- [           main] o.h.b.i.InFlightMetadataCollectorImpl    : HHH000069: Duplicate generator name sequence-generator
+2019-11-07 10:29:50.196  INFO DESKTOP-7K40GQM --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-07 10:29:50.922  INFO DESKTOP-7K40GQM --- [           main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-11-07 10:29:51.763  INFO DESKTOP-7K40GQM --- [           main] c.m.i.s.FileStorageService               : Inside FileStorageService Constructor
+2019-11-07 10:29:51.764  INFO DESKTOP-7K40GQM --- [           main] c.m.i.s.FileStorageService               : About to create file storage location as mentioned in properties file
+2019-11-07 10:29:52.472  WARN DESKTOP-7K40GQM --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-07 10:29:52.783  INFO DESKTOP-7K40GQM --- [           main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-11-07 10:29:53.033  INFO DESKTOP-7K40GQM --- [           main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-07 10:29:53.932  INFO DESKTOP-7K40GQM --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-11-07 10:29:53.969  INFO DESKTOP-7K40GQM --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-11-07 10:29:54.041  INFO DESKTOP-7K40GQM --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-11-07 10:29:54.302  INFO DESKTOP-7K40GQM --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_1
+2019-11-07 10:29:54.329  INFO DESKTOP-7K40GQM --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_2
+2019-11-07 10:29:54.347  INFO DESKTOP-7K40GQM --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_3
+2019-11-07 10:29:54.373  INFO DESKTOP-7K40GQM --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_4
+2019-11-07 10:29:54.588  INFO DESKTOP-7K40GQM --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteConditionsUsingDELETE_1
+2019-11-07 10:29:54.694  INFO DESKTOP-7K40GQM --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8090"]
+2019-11-07 10:29:54.736  INFO DESKTOP-7K40GQM --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8090 (http) with context path ''
+2019-11-07 10:29:54.928  INFO DESKTOP-7K40GQM --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8085 (http)
+2019-11-07 10:29:54.930  INFO DESKTOP-7K40GQM --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8085"]
+2019-11-07 10:29:54.930  INFO DESKTOP-7K40GQM --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-11-07 10:29:54.931  INFO DESKTOP-7K40GQM --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-11-07 10:29:54.990  INFO DESKTOP-7K40GQM --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-11-07 10:29:54.990  INFO DESKTOP-7K40GQM --- [           main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 248 ms
+2019-11-07 10:29:55.063  INFO DESKTOP-7K40GQM --- [           main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-11-07 10:29:55.136  INFO DESKTOP-7K40GQM --- [on(1)-127.0.0.1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-07 10:29:55.136  INFO DESKTOP-7K40GQM --- [on(1)-127.0.0.1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2019-11-07 10:29:55.155  INFO DESKTOP-7K40GQM --- [on(1)-127.0.0.1] o.s.w.s.DispatcherServlet                : Completed initialization in 19 ms
+2019-11-07 10:29:55.187  INFO DESKTOP-7K40GQM --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8085"]
+2019-11-07 10:29:55.196  INFO DESKTOP-7K40GQM --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8085 (http) with context path ''
+2019-11-07 10:29:55.200  INFO DESKTOP-7K40GQM --- [           main] c.m.i.WorkshopApplication                : Started WorkshopApplication in 15.009 seconds (JVM running for 16.985)
+2019-11-07 10:44:40.509  INFO DESKTOP-7K40GQM --- [on(4)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-11-07 10:44:40.714  INFO DESKTOP-7K40GQM --- [on(4)-127.0.0.1] o.s.s.c.ThreadPoolTaskExecutor           : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-07 10:44:40.726  INFO DESKTOP-7K40GQM --- [on(4)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-11-07 10:44:40.729  INFO DESKTOP-7K40GQM --- [on(4)-127.0.0.1] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2019-11-07 10:44:40.732  INFO DESKTOP-7K40GQM --- [on(4)-127.0.0.1] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2019-11-07 10:44:45.240  INFO DESKTOP-7K40GQM --- [           main] c.m.i.WorkshopApplication                : Starting WorkshopApplication on DESKTOP-7K40GQM with PID 13320 (C:\Users\16605\Desktop\HealthTraverse\target\classes started by 16605 in C:\Users\16605\Desktop\HealthTraverse)
+2019-11-07 10:44:45.246  INFO DESKTOP-7K40GQM --- [           main] c.m.i.WorkshopApplication                : The following profiles are active: dev
+2019-11-07 10:44:46.757  INFO DESKTOP-7K40GQM --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-07 10:44:46.922  INFO DESKTOP-7K40GQM --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 157ms. Found 18 repository interfaces.
+2019-11-07 10:44:47.506  INFO DESKTOP-7K40GQM --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3dc661e2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-07 10:44:47.872  INFO DESKTOP-7K40GQM --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8090 (http)
+2019-11-07 10:44:47.892  INFO DESKTOP-7K40GQM --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8090"]
+2019-11-07 10:44:47.906  INFO DESKTOP-7K40GQM --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-11-07 10:44:47.907  INFO DESKTOP-7K40GQM --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-11-07 10:44:48.165  INFO DESKTOP-7K40GQM --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-11-07 10:44:48.165  INFO DESKTOP-7K40GQM --- [           main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 2880 ms
+2019-11-07 10:44:48.617  INFO DESKTOP-7K40GQM --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2019-11-07 10:44:51.571  INFO DESKTOP-7K40GQM --- [           main] c.z.h.p.PoolBase                         : HikariPool-1 - Driver does not support get/set network timeout for connections. (This operation is not supported.)
+2019-11-07 10:44:51.938  INFO DESKTOP-7K40GQM --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2019-11-07 10:44:52.065  INFO DESKTOP-7K40GQM --- [           main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-11-07 10:44:52.164  INFO DESKTOP-7K40GQM --- [           main] o.h.Version                              : HHH000412: Hibernate Core {5.3.11.Final}
+2019-11-07 10:44:52.167  INFO DESKTOP-7K40GQM --- [           main] o.h.c.Environment                        : HHH000206: hibernate.properties not found
+2019-11-07 10:44:52.407  INFO DESKTOP-7K40GQM --- [           main] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-11-07 10:44:53.006  INFO DESKTOP-7K40GQM --- [           main] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.SQLServer2012Dialect
+2019-11-07 10:44:56.594  WARN DESKTOP-7K40GQM --- [           main] o.h.b.i.InFlightMetadataCollectorImpl    : HHH000069: Duplicate generator name sequence-generator
+2019-11-07 10:44:57.582  INFO DESKTOP-7K40GQM --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-07 10:44:58.212  INFO DESKTOP-7K40GQM --- [           main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-11-07 10:44:58.848  INFO DESKTOP-7K40GQM --- [           main] c.m.i.s.FileStorageService               : Inside FileStorageService Constructor
+2019-11-07 10:44:58.848  INFO DESKTOP-7K40GQM --- [           main] c.m.i.s.FileStorageService               : About to create file storage location as mentioned in properties file
+2019-11-07 10:44:59.481  WARN DESKTOP-7K40GQM --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-07 10:44:59.754  INFO DESKTOP-7K40GQM --- [           main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-11-07 10:44:59.988  INFO DESKTOP-7K40GQM --- [           main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-07 10:45:00.839  INFO DESKTOP-7K40GQM --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-11-07 10:45:00.876  INFO DESKTOP-7K40GQM --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-11-07 10:45:00.944  INFO DESKTOP-7K40GQM --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-11-07 10:45:01.191  INFO DESKTOP-7K40GQM --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_1
+2019-11-07 10:45:01.220  INFO DESKTOP-7K40GQM --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_2
+2019-11-07 10:45:01.236  INFO DESKTOP-7K40GQM --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_3
+2019-11-07 10:45:01.266  INFO DESKTOP-7K40GQM --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: getLoggedInUserUsingGET_4
+2019-11-07 10:45:01.508  INFO DESKTOP-7K40GQM --- [           main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteConditionsUsingDELETE_1
+2019-11-07 10:45:01.528  INFO DESKTOP-7K40GQM --- [on(1)-127.0.0.1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-07 10:45:01.529  INFO DESKTOP-7K40GQM --- [on(1)-127.0.0.1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2019-11-07 10:45:01.546  INFO DESKTOP-7K40GQM --- [on(1)-127.0.0.1] o.s.w.s.DispatcherServlet                : Completed initialization in 17 ms
+2019-11-07 10:45:01.613  INFO DESKTOP-7K40GQM --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8090"]
+2019-11-07 10:45:01.656  INFO DESKTOP-7K40GQM --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8090 (http) with context path ''
+2019-11-07 10:45:01.812  INFO DESKTOP-7K40GQM --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8085 (http)
+2019-11-07 10:45:01.813  INFO DESKTOP-7K40GQM --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8085"]
+2019-11-07 10:45:01.814  INFO DESKTOP-7K40GQM --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-11-07 10:45:01.814  INFO DESKTOP-7K40GQM --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-11-07 10:45:01.853  INFO DESKTOP-7K40GQM --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-11-07 10:45:01.853  INFO DESKTOP-7K40GQM --- [           main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 191 ms
+2019-11-07 10:45:01.885  INFO DESKTOP-7K40GQM --- [           main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 15 endpoint(s) beneath base path '/actuator'
+2019-11-07 10:45:01.987  INFO DESKTOP-7K40GQM --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8085"]
+2019-11-07 10:45:01.995  INFO DESKTOP-7K40GQM --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8085 (http) with context path ''
+2019-11-07 10:45:01.998  INFO DESKTOP-7K40GQM --- [           main] c.m.i.WorkshopApplication                : Started WorkshopApplication in 17.136 seconds (JVM running for 18.711)
+2019-11-07 10:45:08.966  WARN DESKTOP-7K40GQM --- [nio-8090-exec-2] o.s.w.s.PageNotFound                     : Request method 'POST' not supported

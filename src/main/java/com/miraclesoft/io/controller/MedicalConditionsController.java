@@ -1,5 +1,7 @@
 package com.miraclesoft.io.controller;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
 
@@ -7,7 +9,9 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -108,13 +112,44 @@ public class MedicalConditionsController {
 //	         
 //	    }
 	    
-	    
-	    @GetMapping(value="/medical-condition/{pid}",produces=MediaType.APPLICATION_JSON_VALUE)
-	    public List<Object[]> fetchMedicalConditions(@PathVariable("pid") long pid) throws Exception {
-		 System.out.println("fetching records from database....");
-		 return medicalConditionsRepository.getMedic(pid);	         
-	         
-	    }
-
-    
+	  // Native Query will directly get json  from repo
+//	    @GetMapping(value="/medical-condition/{pid}",produces=MediaType.APPLICATION_JSON_VALUE)
+//	    public List<Object[]> fetchMedicalConditions(@PathVariable("pid") long pid) throws Exception {
+//		 System.out.println("fetching records from database....");
+//		 return medicalConditionsRepository.getMedic(pid);	         
+//	         
+//	    }
+  
+//    @GetMapping(value="/medical-condition/{pid}",produces=MediaType.APPLICATION_JSON_VALUE)
+//    public ResponseEntity<?> fetchMedicalconditions(@Value("${fetchAllmedictions}") String query, @PathVariable long pid){
+//    	System.out.println("fetching records from database....");
+//		List<Object[]> valueByPid = medicalConditionsRepository.fetchMedicalconditions(query, pid);
+//		
+//		System.out.println(valueByPid);
+//         
+//		// return abc.get(0).getDosage();
+//		List li =new ArrayList<>();
+//		HashMap<String, Object> map;
+//
+//     	if (valueByPid != null) {
+//        	for (Object[] result : valueByPid) {
+//			map = new HashMap<>();
+//			map.put("PID", result[0]);
+//			map.put("ConditionType_ID", result[1]);
+//			map.put("DiagnosisDate", result[2]);
+//			map.put("Condition_Name", result[3]);
+//			map.put("Severity", result[4]);
+//			map.put("Triggers", result[5]);
+//			li.add(map);
+//		
+//    		}
+//			
+//			return new ResponseEntity<>(li, HttpStatus.OK);
+//		} else {
+//			map = new HashMap<>();
+//			map.put("ErrorResponse", "No Patient");
+//			return new ResponseEntity<>(map, HttpStatus.NOT_FOUND);
+//		}
+//	
+//    }
 }
