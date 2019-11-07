@@ -53,12 +53,14 @@ public class HealthController {
 			@RequestParam("severity")String severity,
 			@RequestParam("triggers")String triggers,
 			@RequestParam("diagnosisDate") String diagnosisDate,
+			@RequestParam("linkToApi") String linkToApi,
 			@RequestParam("image")MultipartFile im) throws IOException, ParseException
 	{
 		
 		HealthCare healthCare=new HealthCare();
 //		healthCare.setLinkToApi(linkToApi);
 		healthCare.setSeverity(severity);
+		healthCare.setLinkToApi(linkToApi);
 		healthCare.setTriggers(triggers);
 		healthCare.setImage(im.getBytes());
 		healthCare.setConditionName(conditionName);
@@ -110,6 +112,7 @@ public class HealthController {
 			map.put("Severity", result[4]);
 			map.put("Triggers", result[5]);
 			map.put("Image", result[6]);
+			map.put("LinktoAPI", result[7]);
 			li.add(map);
 		
 			
