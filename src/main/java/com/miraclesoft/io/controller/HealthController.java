@@ -109,6 +109,7 @@ public class HealthController {
 			map.put("Condition_Name", result[3]);
 			map.put("Severity", result[4]);
 			map.put("Triggers", result[5]);
+			map.put("Image", result[6]);
 			li.add(map);
 		
 			
