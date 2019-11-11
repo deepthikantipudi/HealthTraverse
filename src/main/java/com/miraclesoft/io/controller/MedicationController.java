@@ -136,13 +136,15 @@ public class MedicationController {
 
 	@RequestMapping(value = "/editmed/{id}", method = RequestMethod.PUT, consumes = { "multipart/form-data" })
 	public Medication_Details updateMed(@PathVariable int id, @RequestParam("DESCRIPTION") String desc,
-			@RequestParam("MEDNAME") String title, @RequestParam("MEDIMAGE") MultipartFile im) throws IOException {
+			@RequestParam("MEDNAME") String title, @RequestParam("MEDSCHEDULE") String MEDSCHEDULE, @RequestParam("MEDIMAGE") MultipartFile im) throws IOException {
 
 		System.out.println("updating record in database....");
 		Medication_Details med = new Medication_Details();
+		
 		med.setMEDID(id);
 		med.setDESCRIPTION(desc);
 		med.setMEDNAME(title);
+		med.setMEDSCHEDULE(MEDSCHEDULE);
 		// med.setDosage(dosage);
 		med.setMedImage(im.getBytes());
 		return medrepo.save(med);

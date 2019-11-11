@@ -24,4 +24,6 @@ public interface CustomFCHRepository {
 	///
 	
 	List<Object[]> fetchMedicalconditions(String query, long pid);
+	
+	long fetchId(String query, long id);
 }

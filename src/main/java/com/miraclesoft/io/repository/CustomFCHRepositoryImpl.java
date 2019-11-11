@@ -236,6 +236,19 @@ public class CustomFCHRepositoryImpl implements CustomFCHRepository {
 		List<Object[]> conditions = query.getResultList();
 		return conditions;
 	}
+
+	@Override
+	public long fetchId(String fetchID, long id) {
+		long res = 0l;
+		 List<Object[]> result= null;
+		// TODO Auto-generated method stub
+		Query query = entityManager.createNativeQuery(fetchID);
+		query.setParameter(1, id );
+//		List<Object[]> value  = query.getResultList();
+    	res = Long.parseLong(String.valueOf(result.get(0)[0]));
+
+		return res;
+	}
 			
 
 	
